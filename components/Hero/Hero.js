@@ -24,12 +24,12 @@ const Hero = () => {
         </div>
         <div className="hidden lg:block absolute -left-12">
           <Image
-            height={800}
-            width={650}
+            height={700}
+            width={550}
             alt="my image"
             src="/2.jpg"
             layout="fixed"
-            className="rounded shadow-2xl"
+            className="rounded-xl shadow-2xl"
           />
         </div>
       </div>
