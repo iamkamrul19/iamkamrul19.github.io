@@ -8,8 +8,10 @@ const index = () => {
         <title>Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main>
-        <Hero />
+      <main className=" lg:[100vh] overflow-hidden">
+        <div className="container md:mx-auto mx-3">
+          <Hero />
+        </div>
       </main>
     </>
   );
