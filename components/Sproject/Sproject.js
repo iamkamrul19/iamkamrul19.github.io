@@ -6,9 +6,10 @@ const Sproject = ({ content }) => {
   console.log("content :", content);
   return (
     <section>
-      <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)] project-container lg:hidden">
+      <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)]  lg:hidden">
         <h6 className="text-[#e6f1ff] text-xl">Spotify Profile</h6>
-        <p className="text-lg text-[#a8b8d1] pt-6 text-justify">
+        <hr className="border-[#64ffda] w-6/12 mt-2" />
+        <p className="text-base text-[#a8b8d1] pt-6 ">
           A web app for visualizing personalized Spotify data. View your top
           artists, top tracks, recently played tracks, and detailed audio
           information about each track. Create and save new playlists of
@@ -35,7 +36,7 @@ const Sproject = ({ content }) => {
         </div>
       </div>
       <div
-        className={`w-full mx-auto  my-5  flex items-center ${
+        className={`hidden lg:flex w-full mx-auto  my-5  items-center ${
           content % 2 !== 0 && "flex-row-reverse"
         }`}
       >

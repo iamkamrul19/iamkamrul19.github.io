@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="md:h-[100vh] md: flex flex-col lg:flex-row gap-y-10 justify-center relative">
       <div className="md:flex justify-center items-center hidden lg:w-1/2">
-        <div className="h-[200%] w-3/12 bg-[#64ffda] absolute -top-10 -left-52 -rotate-12"></div>
+        <div className="h-[200%] w-4/12 bg-[#64ffda] absolute -top-16 -left-80 2xl:-left-96 -rotate-12"></div>
         <div className="lg:hidden">
           <Image
             height={300}
@@ -22,7 +22,7 @@ const Hero = () => {
             layout="fixed"
           />
         </div>
-        <div className="hidden lg:block absolute -left-12">
+        <div className="hidden lg:block absolute 2xl:-left-40 -left-6">
           <Image
             height={700}
             width={550}
@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="h-[100vh] md:h-auto flex flex-col justify-center md:items-center lg:items-start lg:w-1/2">
-        <h1 className="text-theme-text-title text-3xl lg:text-[52px] font-bold pb-1 lg:leading-[60px]">
+        <h1 className="text-theme-text-title text-3xl lg:text-[50px] font-bold pb-1 lg:leading-[60px]">
           I&apos;m MD KAMRUL HASAN
         </h1>
         <h4 className="text-2xl font-bold text-theme-text-sub-title pb-3 lg:text-[48px] lg:leading-[60px]">

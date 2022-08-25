@@ -23,10 +23,10 @@ const Contact = () => (
               <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
                 DON&apos;T BE SHY!
               </h4>
-              <p className="text-theme-text-normal py-5">
+              <p className="text-theme-text-normal py-5 lg:pr-5">
                 Feel free to get in touch with me. I am always open to
-                discussing new projects, <br className="hidden 2xl:block" />{" "}
-                creative ideas or opportunities to be part of your visions.
+                discussing new projects, creative ideas or opportunities to be
+                part of your visions.
               </p>
 
               <div className="flex gap-3 items-center pt-2">
@@ -69,28 +69,28 @@ const Contact = () => (
               <form>
                 <input
                   type="text"
-                  className="lg:w-8/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5"
+                  className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5"
                   placeholder="YOUR NAME"
                 />
                 <input
                   type="email"
-                  className="lg:w-8/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
+                  className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
                   placeholder="YOUR EMAIL"
                 />
                 <input
                   type="text"
-                  className="lg:w-8/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
+                  className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
                   placeholder="YOUR SUBJECT"
                 />
                 <textarea
                   required
                   type="text"
-                  className="lg:w-8/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
+                  className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
                   placeholder="YOUR SUBJECT"
                 />
                 <button
                   type="submit"
-                  className="text-theme-text-title  mt-6 border  w-7/12 md:w-4/12 py-3 rounded-2xl border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out font-light hover:text-theme-text-highlight"
+                  className="text-theme-text-title  mt-6 border  w-7/12 md:w-5/12 py-3 rounded-2xl border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out font-light hover:text-theme-text-highlight"
                 >
                   SEND
                 </button>

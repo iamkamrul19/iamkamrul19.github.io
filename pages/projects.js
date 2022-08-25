@@ -10,7 +10,7 @@ const projects = () => {
         <title>Projects</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <main className=" lg:[100vh] overflow-hidden">
+      <main className=" overflow-hidden">
         <div className="container md:mx-auto px-5 pt-10">
           <div className="relative">
             <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block">
