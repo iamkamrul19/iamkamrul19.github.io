@@ -191,26 +191,14 @@ export const External = () => {
     </svg>
   );
 };
-export const AngleDownIcon = ({ rotate, styles, fill }) => (
-  <svg
-    stroke="currentColor"
-    fill={fill ? fill : "#635bff"}
-    strokeWidth="0"
-    viewBox="0 0 320 512"
-    xmlns="http://www.w3.org/2000/svg"
-    className={`mt-1 h-4 ${rotate} ${styles && styles}`}
-  >
-    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
-  </svg>
-);
-export const CrossIcon = (props) => {
+
+export const CrossIcon = () => {
   return (
-    <span {...props}>
+    <span>
       <svg
         viewBox="0 0 94.926 94.926"
-        fill="black"
+        fill="#64ffda"
         xmlns="http://www.w3.org/2000/svg"
-        style={props.style}
       >
         <path
           d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0
@@ -229,7 +217,7 @@ export const BurgerMenu = () => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 20 20"
-      fill="black"
+      fill="#64ffda"
     >
       <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z" />
     </svg>

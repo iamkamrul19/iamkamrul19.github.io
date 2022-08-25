@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { External, Github } from "../SVG/SVG";
 const Sproject = ({ content }) => {
-  console.log("content :", content);
   return (
     <section>
       <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)]  lg:hidden">

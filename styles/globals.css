@@ -16,32 +16,7 @@
   header {
     background: transparent;
   }
-  header.stickyHeader {
-    background: #fff;
-    position: fixed;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-  }
-  .navbar_nav {
-    @apply flex flex-wrap justify-end items-center;
-  }
-
-  .nav_button,
-  .nav_item {
-    position: relative;
-  }
-
-  .nav_link {
-    @apply text-white font-semibold capitalize flex items-center md:px-3 md:py-7;
-  }
-  header.stickyHeader .nav_item .nav_link {
-    @apply text-gray py-4;
-  }
-
-  header.stickyHeader .nav_item > .nav_link svg {
-    @apply text-white;
-  }
-
-  .nav_link.active {
-    color: #635bff;
+  .active {
+    color: #64ffda;
   }
 }

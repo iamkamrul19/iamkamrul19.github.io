@@ -8,6 +8,7 @@ import Portfolio from "../components/Portfolio/Portfolio";
 const index = () => {
   return (
     <>
+      <div className="js__observer"></div>
       <Hero />
       <About />
       <Experience />
