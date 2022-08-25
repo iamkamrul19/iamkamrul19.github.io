@@ -1,18 +1,18 @@
-import Head from "next/head";
 import React from "react";
+import About from "../components/About/About";
+import Contact from "../components/Contact/Contact";
+import Experience from "../components/Experience/Experience";
 import Hero from "../components/Hero/Hero";
+import Portfolio from "../components/Portfolio/Portfolio";
+
 const index = () => {
   return (
     <>
-      <Head>
-        <title>Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <main className=" lg:[100vh] overflow-hidden">
-        <div className="container md:mx-auto mx-3">
-          <Hero />
-        </div>
-      </main>
+      <Hero />
+      <About />
+      <Experience />
+      <Portfolio />
+      <Contact />
     </>
   );
 };

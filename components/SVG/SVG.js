@@ -191,3 +191,47 @@ export const External = () => {
     </svg>
   );
 };
+export const AngleDownIcon = ({ rotate, styles, fill }) => (
+  <svg
+    stroke="currentColor"
+    fill={fill ? fill : "#635bff"}
+    strokeWidth="0"
+    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+    className={`mt-1 h-4 ${rotate} ${styles && styles}`}
+  >
+    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+  </svg>
+);
+export const CrossIcon = (props) => {
+  return (
+    <span {...props}>
+      <svg
+        viewBox="0 0 94.926 94.926"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+        style={props.style}
+      >
+        <path
+          d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0
+  c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096
+  c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476
+  c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62
+  s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z"
+        />
+      </svg>
+    </span>
+  );
+};
+export const BurgerMenu = () => {
+  return (
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="black"
+    >
+      <path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z" />
+    </svg>
+  );
+};
