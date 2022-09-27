@@ -35,7 +35,7 @@ const Sproject = ({ content }) => {
         </div>
       </div>
       <div
-        className={`hidden lg:flex w-full mx-auto  my-5  items-center ${
+        className={`hidden lg:flex w-full mx-auto  my-20  items-center ${
           content % 2 !== 0 && "flex-row-reverse"
         }`}
       >

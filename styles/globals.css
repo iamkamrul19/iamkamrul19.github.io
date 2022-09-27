@@ -19,4 +19,71 @@
   .active {
     color: #64ffda;
   }
+
+  .button-animation {
+    overflow: hidden;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+  }
+
+  .button-animation {
+    position: relative;
+    z-index: 2;
+  }
+
+  .button-animation:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #64ffdb77;
+    transition: all 0.35s;
+  }
+
+  .button-animation:hover {
+    color: white;
+    border: 1px solid #64ffdb77;
+  }
+
+  .button-animation:hover:after {
+    width: 100%;
+  }
+  .svg-animation {
+    overflow: hidden;
+    transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+  }
+
+  .svg-animation {
+    position: relative;
+    z-index: 2;
+  }
+
+  .svg-animation:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #64ffdb77;
+    transition: all 0.35s;
+  }
+
+  .svg-animation:hover {
+    color: white;
+    border: 1px solid #64ffdb77;
+  }
+
+  .svg-animation:hover:after {
+    width: 100%;
+  }
 }

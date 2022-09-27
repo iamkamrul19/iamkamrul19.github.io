@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Sproject from "../Sproject/Sproject";
 
 const Portfolio = () => {
   const project = [1, 2, 3];
+  const [selected, setSelected] = useState("All");
+
+  const handleCatagories = (type) => {
+    setSelected(type);
+    console.log(type);
+  };
+  console.log("selected :", selected);
   return (
     <div className="container md:mx-auto px-5 pt-10" id="portfolio">
       <div className="relative">
@@ -14,14 +21,46 @@ const Portfolio = () => {
         </h4>
       </div>
       <div className="pt-5">
-        <h4 className="text-theme-text-title text-2xl font-semibold ">
+        <h4 className="text-theme-text-title text-2xl font-semibold text-center lg:text-start">
           Some Things I&apos;ve Built
         </h4>
-        <div className="">
-          {project.map((item, idx) => {
-            return <Sproject key={idx} content={idx} />;
-          })}
-        </div>
+      </div>
+      <div className="flex flex-row  gap-5 justify-center lg:justify-start">
+        <button
+          onClick={() => handleCatagories("All")}
+          className={`${
+            selected != "All"
+              ? "text-theme-text-sub-title"
+              : "text-theme-text-highlight border-[#64ffda]"
+          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-lg active:scale-[0.95] transition ease-in-out`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => handleCatagories("Full Stack")}
+          className={`${
+            selected != "Full Stack"
+              ? "text-theme-text-sub-title "
+              : "text-theme-text-highlight border-[#64ffda]"
+          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-lg active:scale-[0.95] transition ease-in-out`}
+        >
+          Full Stack
+        </button>
+        <button
+          onClick={() => handleCatagories("Front End")}
+          className={`${
+            selected != "Front End"
+              ? "text-theme-text-sub-title"
+              : "text-theme-text-highlight border-[#64ffda]"
+          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-lg active:scale-[0.95] transition ease-in-out`}
+        >
+          Front End
+        </button>
+      </div>
+      <div className="">
+        {project.map((item, idx) => {
+          return <Sproject key={idx} content={idx} />;
+        })}
       </div>
     </div>
   );

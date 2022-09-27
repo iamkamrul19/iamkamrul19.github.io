@@ -57,7 +57,7 @@ export const Call = () => {
 export const Git = () => {
   return (
     <svg
-      className="h-[40px] w-[40px]"
+      className="h-[40px] w-[40px] cursor-pointer relative z-1 transition-all duration-300"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export const Git = () => {
 export const Linkedin = () => {
   return (
     <svg
-      className="h-[40px] w-[40px]"
+      className="h-[40px] w-[40px] cursor-pointer relative z-1 transition-all duration-300"
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -167,6 +167,7 @@ export const Github = () => {
     </svg>
   );
 };
+
 export const External = () => {
   return (
     <svg

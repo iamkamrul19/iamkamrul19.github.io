@@ -1,10 +1,41 @@
-import React from "react";
+import axios from "axios";
+import Link from "next/link";
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Call, Email, Git, Linkedin } from "../SVG/SVG";
-
 const Contact = () => {
+  const [formData, setFormData] = useState({});
+
+  const handleInputChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    let newFromData = { ...formData };
+    newFromData[field] = value;
+    setFormData(newFromData);
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("submit", formData);
+    try {
+      const response = await axios.get(
+        `https://webhook.site/f7f46081-c7ae-4011-9add-085f63a9a655?name=${formData.name}&email=${formData.email}&subject=${formData.subject}&message=${formData.message}`
+      );
+      console.log("response :", response);
+      toast.success("Form submitted successfully");
+    } catch (error) {
+      toast.error("Error !, Try again.");
+      console.log("error", error);
+    }
+  };
+
   return (
-    <div className="container md:mx-auto px-5 pt-10" id="contact">
+    <div
+      className="container md:mx-auto px-5 pt-10 py-10 lg:py-32"
+      id="contact"
+    >
       <div className="">
+        <ToastContainer />
         <div className="relative">
           <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block">
             CONTACT
@@ -13,8 +44,8 @@ const Contact = () => {
             GET IN <span className="text-theme-text-highlight">TOUCH</span>{" "}
           </h4>
         </div>
-        <div className="flex flex-col md:flex-row 2xl:items-center">
-          <div className="w-full md:w-1/2">
+        <div className="flex flex-col lg:flex-row justify-center items-center 2xl:items-center">
+          <div className="w-full md:w-8/12 lg:w-1/2">
             <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
               DON&apos;T BE SHY!
             </h4>
@@ -53,31 +84,53 @@ const Contact = () => {
               </div>
             </div>
             <div className=" flex gap-5 mt-5">
-              <Git /> <Linkedin />
+              <Link href="https://github.com/kamrul-hasan01">
+                <a target="_blank" rel="noopener noreferrer">
+                  {" "}
+                  <Git />
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/kamrul-hasan01/">
+                <a target="_blank" rel="noopener noreferrer">
+                  {" "}
+                  <Linkedin />
+                </a>
+              </Link>
             </div>
           </div>
-          <div className="w-full md:w-1/2 mt-10 py-[10px]">
-            <form>
+          <div className="w-full md:w-8/12 lg:w-1/2 mt-10 py-[10px]">
+            <form onSubmit={(e) => handleSubmit(e)}>
               <input
+                required
                 type="text"
                 className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5"
+                name="name"
                 placeholder="YOUR NAME"
+                onChange={(e) => handleInputChange(e)}
               />
               <input
+                required
                 type="email"
                 className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
                 placeholder="YOUR EMAIL"
+                name="email"
+                onChange={(e) => handleInputChange(e)}
               />
               <input
+                required
                 type="text"
                 className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border-2 border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
                 placeholder="YOUR SUBJECT"
+                name="subject"
+                onChange={(e) => handleInputChange(e)}
               />
               <textarea
                 required
                 type="text"
                 className="lg:w-10/12 lg:mx-0 w-full mx-auto block py-3 rounded-2xl bg-transparent border border-[#64ffda] focus:border-[#64ffda] outline-0 text-theme-text-title pl-5 mt-5"
-                placeholder="YOUR SUBJECT"
+                placeholder="YOUR Message"
+                name="message"
+                onChange={(e) => handleInputChange(e)}
               />
               <button
                 type="submit"

@@ -1,9 +1,15 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
+import { Git, Linkedin } from "../SVG/SVG";
 
 const About = () => {
   const skills = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const handleDownload = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="container md:mx-auto px-5 pt-10" id="about">
       <div className="">
@@ -28,13 +34,51 @@ const About = () => {
               HTML & CSS! 2012 when I decided to try editing custom Tumblr
               themes — turns out hacking together a custom reblog
             </p>
+            <div className=" flex gap-5 my-2 items-center ">
+              <Link href="https://github.com/kamrul-hasan01/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+                >
+                  <Git />
+
+                  <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                    Github
+                  </span>
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/kamrul-hasan01/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+                >
+                  <Linkedin />
+
+                  <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                    Linkedin
+                  </span>
+                </a>
+              </Link>
+            </div>
+
             <div className="flex flex-col md:flex-row  gap-5">
-              <button className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 lg:w-5/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out">
-                Download Resume
-              </button>
-              <button className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out">
-                Contact
-              </button>
+              <Link href="https://drive.google.com/file/d/1Am_prNFpqaxvE8WfyRpG1R0fq_jNx1ZX/view?usp=sharing">
+                <a
+                  target="_blank"
+                  download
+                  className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 lg:w-5/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center"
+                >
+                  Download Resume
+                </a>
+              </Link>
+
+              <Link href="/#contact">
+                <a className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
+                  Contact
+                </a>
+              </Link>
             </div>
           </div>
           <div className="w-full md:w-1/2 pt-20  md:pt-10 ">

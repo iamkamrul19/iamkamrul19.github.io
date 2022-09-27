@@ -14,12 +14,12 @@ const Experience = () => {
         </div>
 
         <div className="flex flex-col md:flex-row">
-          <div className="w-full">
+          <div className="w-full md:w-8/12 lg:w-full mx-auto">
             <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
               Where I&apos;ve Worked
             </h4>
 
-            <div className=" mx-auto mt-5">
+            <div className=" mx-auto mt-5 ">
               <ol className="relative border-l border-gray-200 dark:border-gray-700">
                 <li className="mb-10 ml-4">
                   <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
