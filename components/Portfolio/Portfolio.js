@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Sproject from "../Sproject/Sproject";
 
-const Portfolio = () => {
-  const project = [1, 2, 3];
+const Portfolio = ({ portfolioList }) => {
+  const [AllProject, setAllProject] = useState([...portfolioList]);
+  console.log("AllProject :", AllProject);
   const [selected, setSelected] = useState("All");
-
+  const test = [1, 2, 3];
   const handleCatagories = (type) => {
     setSelected(type);
     console.log(type);
@@ -58,7 +59,7 @@ const Portfolio = () => {
         </button>
       </div>
       <div className="">
-        {project.map((item, idx) => {
+        {AllProject.map((item, idx) => {
           return <Sproject key={idx} content={idx} />;
         })}
       </div>

@@ -2,7 +2,20 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { Git, Linkedin } from "../SVG/SVG";
+import {
+  BootstrapIcon,
+  Css,
+  FigmaIcon,
+  FirebaseIcon,
+  Git,
+  GitIcon,
+  Html,
+  JavaScript,
+  Linkedin,
+  NodeIcon,
+  NpmIcon,
+  ReactIcon,
+} from "../SVG/SVG";
 
 const About = () => {
   const skills = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -111,9 +124,19 @@ const About = () => {
                     key={index}
                     className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3"
                   >
+                    <Html />
+                    <Css />
+                    <JavaScript />
+                    <ReactIcon />
+                    <NodeIcon />
+                    <FirebaseIcon />
+                    <NpmIcon />
+                    <GitIcon />
+                    <FigmaIcon />
+                    <BootstrapIcon />
                     <Image
-                      height={80}
-                      width={80}
+                      height={40}
+                      width={40}
                       alt="my image"
                       layout="fixed"
                       className="rounded-lg group-hover:text-white mt-3 group-hover:scale-110 overflow-hidden"

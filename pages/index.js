@@ -5,17 +5,33 @@ import Experience from "../components/Experience/Experience";
 import Hero from "../components/Hero/Hero";
 import Portfolio from "../components/Portfolio/Portfolio";
 
-const index = () => {
+const index = ({ portfolioList }) => {
   return (
     <>
       <div className="js__observer"></div>
       <Hero />
       <About />
       <Experience />
-      <Portfolio />
+      <Portfolio portfolioList={portfolioList} />
       <Contact />
     </>
   );
 };
+export async function getServerSideProps() {
+  let result;
+  try {
+    const response = await fetch(
+      `https://kamrul-hasan01.github.io/api/portfolioList.json`
+    );
+    result = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+  return {
+    props: {
+      portfolioList: result,
+    },
+  };
+}
 
 export default index;
