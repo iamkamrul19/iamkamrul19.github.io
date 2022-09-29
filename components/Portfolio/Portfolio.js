@@ -3,14 +3,14 @@ import Sproject from "../Sproject/Sproject";
 
 const Portfolio = ({ portfolioList }) => {
   const [AllProject, setAllProject] = useState([...portfolioList]);
-  console.log("AllProject :", AllProject);
+
   const [selected, setSelected] = useState("All");
   const test = [1, 2, 3];
   const handleCatagories = (type) => {
     setSelected(type);
     console.log(type);
   };
-  console.log("selected :", selected);
+
   return (
     <div className="container md:mx-auto px-5 pt-10" id="portfolio">
       <div className="relative">
