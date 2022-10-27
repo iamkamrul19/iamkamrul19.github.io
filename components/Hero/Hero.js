@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
@@ -7,32 +6,31 @@ const Hero = () => {
       <section className="container md:mx-auto mx-3 ">
         <div className="md:h-[100vh] md: flex flex-col lg:flex-row gap-y-10 justify-center relative">
           <div className="md:flex justify-center items-center hidden lg:w-1/2">
-            <div className="h-[200%] w-4/12 bg-[#64ffda] absolute -top-16 -left-80 2xl:-left-96 -rotate-12"></div>
+            <div
+              className=" h-[200%] w-4/12  absolute -top-16 -left-80 2xl:-left-96 -rotate-12"
+              style={{
+                background:
+                  "linear-gradient(180deg, #64ffda -40%, #0a192f 50%)",
+              }}
+            ></div>
             <div className="lg:hidden">
-              <Image
+              {/* <Image
                 height={300}
                 width={300}
                 alt="my image"
                 src="/my.png"
                 layout="fixed"
-              />
-              <Image
-                height={300}
-                width={300}
-                alt="my image"
-                src="/my.png"
-                layout="fixed"
-              />
+              /> */}
             </div>
             <div className="hidden lg:block absolute 2xl:-left-40 -left-6">
-              <Image
+              {/* <Image
                 height={700}
                 width={550}
                 alt="my image"
                 src="/2.jpg"
                 layout="fixed"
                 className="rounded-xl shadow-2xl"
-              />
+              /> */}
             </div>
           </div>
           <div className="h-[100vh] md:h-auto flex flex-col justify-center md:items-center lg:items-start lg:w-1/2">

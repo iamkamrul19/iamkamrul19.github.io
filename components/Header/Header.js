@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -99,12 +98,12 @@ const Header = () => {
   };
   // console.log("nav-open", navOpen);
   const handleIconClick = () => {
-    console.log("hello");
-    document.querySelectorAll(".nav__item").forEach((el) => {
-      el.classList.remove("active");
-    });
-    document.getElementById("hero").classList.add("active");
-    console.log(document.getElementById("hero"));
+    // console.log("hello");
+    // document.querySelectorAll(".nav__item").forEach((el) => {
+    //   el.classList.remove("active");
+    // });
+    // document.getElementById("hero").classList.add("active");
+    // console.log(document.getElementById("hero"));
   };
 
   return (
@@ -117,7 +116,18 @@ const Header = () => {
           <nav className="flex justify-between items-center ">
             <Link href="#about">
               <a className={`w-[45%] md:w-auto flex`} onClick={handleIconClick}>
-                <Image src="/vercel.svg" width={212} height={37} alt="Logo" />
+                <p className="text-2xl group">
+                  <span className="text-theme-text-highlight group-hover:text-theme-text-title">
+                    {"<"}
+                  </span>
+                  <span className="text-theme-text-title  group-hover:text-theme-text-highlight">
+                    Kamrul_Hasan
+                  </span>
+                  <span className="text-theme-text-highlight group-hover:text-theme-text-title">
+                    {"/>"}
+                  </span>
+                </p>
+                {/* <Image src="/vercel.svg" width={212} height={37} alt="Logo" /> */}
               </a>
             </Link>
 
