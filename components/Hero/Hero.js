@@ -34,10 +34,13 @@ const Hero = () => {
             </div>
           </div>
           <div className="h-[100vh] md:h-auto flex flex-col justify-center md:items-center lg:items-start lg:w-1/2">
-            <h1 className="text-theme-text-title text-3xl lg:text-[50px] font-bold pb-1 lg:leading-[60px]">
-              I&apos;m MD KAMRUL HASAN
+            <h1 className="text-theme-text-title text-3xl lg:text-[30px] font-bold pb-1 lg:leading-[60px] ">
+              Hi, my name is
             </h1>
-            <h4 className="text-2xl font-bold text-theme-text-sub-title pb-3 lg:text-[48px] lg:leading-[60px]">
+            <h1 className=" text-theme-text-title text-3xl lg:text-[55px] font-bold pb-1 lg:leading-[60px] ">
+              MD KAMRUL HASAN
+            </h1>
+            <h4 className="text-2xl font-bold text-theme-text-sub-title pb-3 lg:text-[48px] lg:leading-[60px] ">
               WEB DEVELOPER
             </h4>
             <p className="text-theme-text-normal text-sm md:text-center lg:text-left lg:text-lg ">

@@ -86,4 +86,32 @@
   .svg-animation:hover:after {
     width: 100%;
   }
+
+  .typewriter {
+    border-right: 0.1px solid orange;
+    animation: typing 4.5s steps(40, end), blink-caret 0.5s step-end infinite;
+    -webkit-animation: typing 4.5s steps(40, end),
+      blink-caret 0.5s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #64ffda;
+    }
+  }
 }

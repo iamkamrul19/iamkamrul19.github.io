@@ -116,15 +116,18 @@ const Header = () => {
           <nav className="flex justify-between items-center ">
             <Link href="#about">
               <a className={`w-[45%] md:w-auto flex`} onClick={handleIconClick}>
-                <p className="text-2xl group">
-                  <span className="text-theme-text-highlight group-hover:text-theme-text-title">
+                <p className="text-2xl group typewriter flex justify-center items-center">
+                  <span className="text-theme-text-highlight text-4xl group-hover:text-theme-text-title">
                     {"<"}
                   </span>
-                  <span className="text-theme-text-title  group-hover:text-theme-text-highlight">
+                  <span className=" text-theme-text-title  group-hover:text-theme-text-highlight">
                     Kamrul_Hasan
                   </span>
-                  <span className="text-theme-text-highlight group-hover:text-theme-text-title">
-                    {"/>"}
+                  <span className="text-theme-text-highlight  group-hover:text-theme-text-title">
+                    {"/"}
+                  </span>
+                  <span className="text-theme-text-highlight text-4xl group-hover:text-theme-text-title">
+                    {">"}
                   </span>
                 </p>
                 {/* <Image src="/vercel.svg" width={212} height={37} alt="Logo" /> */}
