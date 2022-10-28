@@ -5,7 +5,6 @@ const Portfolio = ({ portfolioList }) => {
   const [AllProject, setAllProject] = useState([...portfolioList]);
 
   const [selected, setSelected] = useState("All");
-  const test = [1, 2, 3];
   const handleCatagories = (type) => {
     setSelected(type);
     console.log(type);
@@ -60,7 +59,7 @@ const Portfolio = ({ portfolioList }) => {
       </div>
       <div className="">
         {AllProject.map((item, idx) => {
-          return <Sproject key={idx} content={idx} />;
+          return <Sproject key={idx} id={idx} content={item} />;
         })}
       </div>
     </div>
