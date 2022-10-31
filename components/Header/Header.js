@@ -116,7 +116,7 @@ const Header = () => {
           <nav className="flex justify-between items-center ">
             <Link href="#about">
               <a className={`w-[45%] md:w-auto flex`} onClick={handleIconClick}>
-                <p className="text-2xl group typewriter flex justify-center items-center">
+                <p className="text-2xl group flex justify-center items-center">
                   <span className="text-theme-text-highlight text-4xl group-hover:text-theme-text-title">
                     {"<"}
                   </span>

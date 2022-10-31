@@ -22,7 +22,7 @@ import {
 
 const Skills = () => {
   return (
-    <div className="container ">
+    <div className="container relative ">
       <div className="flex flex-col md:flex-row mt-20">
         <div className="w-full">
           <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
