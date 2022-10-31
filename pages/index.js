@@ -4,6 +4,7 @@ import Contact from "../components/Contact/Contact";
 import Experience from "../components/Experience/Experience";
 import Hero from "../components/Hero/Hero";
 import Portfolio from "../components/Portfolio/Portfolio";
+import Skills from "../components/Skills/Skills";
 
 const index = ({ portfolioList }) => {
   return (
@@ -11,6 +12,7 @@ const index = ({ portfolioList }) => {
       <div className="js__observer"></div>
       <Hero />
       <About />
+      <Skills />
       <Experience />
       <Portfolio portfolioList={portfolioList} />
       <Contact />

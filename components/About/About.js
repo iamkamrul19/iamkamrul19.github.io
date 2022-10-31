@@ -2,31 +2,9 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  BootstrapIcon,
-  Css,
-  FigmaIcon,
-  FirebaseIcon,
-  Git,
-  GithubIcon,
-  GitIcon,
-  Html,
-  InsomniaIcon,
-  JavaScript,
-  JestIcon,
-  Linkedin,
-  MongoDBIcon,
-  NextIcon,
-  NodeIcon,
-  NpmIcon,
-  PostmanIcon,
-  ReactIcon,
-  ReduxIcon,
-  TailwindIcon,
-} from "../SVG/SVG";
+import { Git, Linkedin } from "../SVG/SVG";
 
 const About = () => {
-  const skills = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const handleDownload = (e) => {
     e.preventDefault();
   };
@@ -42,18 +20,22 @@ const About = () => {
             ABOUT <span className="text-theme-text-highlight">ME</span>{" "}
           </h4>
         </div>
-        <div className="flex flex-col md:flex-row lg:items-center">
+        <div className="flex flex-col-reverse gap-y-8 lg:gap-y-0 md:flex-row lg:items-center lg:justify-center">
           <div className="w-full md:w-1/2">
             <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
               PERSONAL INFOS
             </h4>
             <p className="text-theme-text-normal py-5">
-              Hello! My name is Brittany and I enjoy creating things that live
-              on the internet. My interest in web development started back in
-              2012 when I decided to try editing custom Tumblr themes — turns
-              out hacking together a custom reblog button taught me a lot about
-              HTML & CSS! 2012 when I decided to try editing custom Tumblr
-              themes — turns out hacking together a custom reblog
+              Hello! My name is Kamrul Hasan, and I like to produce content for
+              the internet. experienced software engineer with a track record of
+              success in the IT industry. Competent in: software architecture,
+              project management, MongoDB, leadership, team management, vanilla
+              js, react js, next js, node js, etc. I studied business and
+              commerce, but my enthusiasm and curiosity have shaped who I am
+              now. I work as a technical instructor for a significant portion of
+              my time, therefore I enjoy imparting my knowledge and talents to
+              others. find easy solutions to difficult problems and enjoy
+              solving real-world issues.
             </p>
             <div className=" flex gap-5 my-2 items-center ">
               <Link href="https://github.com/kamrul-hasan01/">
@@ -103,160 +85,20 @@ const About = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 pt-20  md:pt-10 ">
-            <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]  rounded mx-auto relative  z-[9999px]">
+            <div className="w-[180px] h-[180px] lg:w-[300px] lg:h-[300px]  rounded mx-auto relative  z-[9999px]">
               <Image
-                height={350}
-                width={350}
+                height={300}
+                width={300}
                 alt="my image"
-                src="/2.jpg"
+                src="/1.svg"
                 layout="responsive"
-                className="rounded-lg"
+                className="rounded-[1px]"
               />
-              <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-r border-[#64ffda] absolute    -top-6 -right-6 "></div>
-              <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-l border-[#64ffda] absolute     -bottom-6 -left-6 "></div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row mt-20">
-          <div className="w-full">
-            <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
-              MY SKillS
-            </h4>
-            <p className="text-theme-text-sub-title py-5">
-              Here are a few technologies I’ve been working with recently:
-            </p>
-            <div className="flex gap-3 flex-wrap mb-[60px] mt-3">
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <JavaScript />
+              <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-r border-[#64ffda] absolute    -top-2 -right-2   "></div>
+              <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-l border-[#64ffda] absolute    -top-2 -left-2   "></div>
 
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  JavaScript
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <ReactIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  React JS
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <NextIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Next JS
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <ReduxIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Redux
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <JestIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Jest
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <NpmIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  NPM
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <NodeIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Node JS
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <MongoDBIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  MongoDB
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <FirebaseIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Firebase
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <FigmaIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Figma
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <Html />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  HTML
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <Css />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  CSS
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <GithubIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Git
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <GitIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Github
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <BootstrapIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Bootstrap
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <TailwindIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Tailwind CSS
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <InsomniaIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Insomnia
-                </p>
-              </div>
-              <div className="flex flex-col items-center border-[#64ffda] text-theme-text-highlight gap-y-3 group hover:border-b-[1px] py-3">
-                <PostmanIcon />
-
-                <p className="group-hover:text-white opacity-0 group-hover:opacity-100 duration-700 ease-in-out">
-                  Postman
-                </p>
-              </div>
+              <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-l border-[#64ffda] absolute     -bottom-2 -left-2  "></div>
+              <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-r border-[#64ffda] absolute     -bottom-2 -right-2  "></div>
             </div>
           </div>
         </div>

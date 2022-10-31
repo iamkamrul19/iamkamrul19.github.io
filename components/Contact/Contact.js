@@ -83,17 +83,31 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            <div className=" flex gap-5 mt-5">
-              <Link href="https://github.com/kamrul-hasan01">
-                <a target="_blank" rel="noopener noreferrer">
-                  {" "}
+            <div className=" flex gap-5 my-5 items-center ">
+              <Link href="https://github.com/kamrul-hasan01/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+                >
                   <Git />
+
+                  <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                    Github
+                  </span>
                 </a>
               </Link>
               <Link href="https://www.linkedin.com/in/kamrul-hasan01/">
-                <a target="_blank" rel="noopener noreferrer">
-                  {" "}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+                >
                   <Linkedin />
+
+                  <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                    Linkedin
+                  </span>
                 </a>
               </Link>
             </div>

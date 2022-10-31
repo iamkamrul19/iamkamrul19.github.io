@@ -71,6 +71,7 @@ const Sproject = ({ content, id }) => {
             information about each track. Create and save new playlists of
             recommended tracks based on your existing playlists and more.
           </p>
+
           <div
             className={`text-theme-text-highlight flex gap-x-3  gap-y-2 flex-wrap pt-6  mt-[200px] ${
               id % 2 !== 0 ? "justify-start" : "justify-end"
@@ -80,6 +81,7 @@ const Sproject = ({ content, id }) => {
               return <p key={item}>{item}</p>;
             })}
           </div>
+
           <div
             className={`flex gap-x-3  gap-y-2 flex-wrap pt-6 ${
               id % 2 !== 0 ? "justify-start" : "justify-end"
@@ -87,7 +89,11 @@ const Sproject = ({ content, id }) => {
           >
             {code_front_url && (
               <Link href={code_front_url}>
-                <a target="_blank" rel="noopener noreferrer">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative flex  items-center group"
+                >
                   <Github />
                 </a>
               </Link>
@@ -108,23 +114,6 @@ const Sproject = ({ content, id }) => {
             )}
           </div>
         </div>
-      </div>
-
-      <button
-        data-tooltip-target="tooltip-left"
-        data-tooltip-placement="left"
-        type="button"
-        className="mb-2 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Tooltip left
-      </button>
-      <div
-        id="tooltip-left"
-        role="tooltip"
-        className="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-      >
-        Tooltip on left
-        <div className="tooltip-arrow" data-popper-arrow></div>
       </div>
     </section>
   );
