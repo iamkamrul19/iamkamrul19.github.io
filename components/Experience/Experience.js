@@ -20,13 +20,13 @@ const Experience = () => {
             </h4>
 
             <div className=" mx-auto mt-5 ">
-              <ol className="relative border-l border-gray-200 dark:border-gray-700">
+              <ol className="relative border-l border-theme-text-sub-title">
                 <li className="mb-10 ml-4">
-                  <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                  <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  <div className="absolute w-3 h-3  rounded-full -left-1.5 border  border-gray-900 bg-theme-text-highlight"></div>
+                  <time className="mb-1 text-sm font-normal leading-none text-gray-500">
                     March 2022 - Present
                   </time>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold  text-white">
                     NEXT VENTURES
                   </h3>
                   <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
@@ -36,14 +36,14 @@ const Experience = () => {
                   </p>
                 </li>
                 <li className="mb-10 ml-4">
-                  <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                  <div className="absolute w-3 h-3  rounded-full -left-1.5 border  border-gray-900 bg-theme-text-highlight"></div>
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                     DECEMBER 2021 - March 2022
                   </time>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold  text-white">
                     Marketing UI design in Figma
                   </h3>
-                  <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                  <p className="text-base font-normal  text-gray-400">
                     All of the pages and components are first designed in Figma
                     and we keep a parity between the two versions even as we
                     update the project.

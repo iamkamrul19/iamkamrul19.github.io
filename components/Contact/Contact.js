@@ -62,10 +62,10 @@ const Contact = () => {
               <div className="">
                 <p className="text-theme-text-sub-title text-lg m-0">MAIL ME</p>
                 <a
-                  href="mailto:01945560"
+                  href="mailto:kamrulhasan.kh02@gmail.com"
                   className="text-theme-text-highlight m-y-0"
                 >
-                  kamrul@gmail.com
+                  kamrulhasan.kh02@gmail.com
                 </a>
               </div>
             </div>
@@ -76,10 +76,10 @@ const Contact = () => {
               <div className="">
                 <p className="text-theme-text-sub-title text-lg m-0">CALL ME</p>
                 <a
-                  href="tel:123-456-7890"
+                  href="tel:+8801950458002"
                   className="text-theme-text-highlight m-y-0"
                 >
-                  01950458000
+                  +8801950458002
                 </a>
               </div>
             </div>
