@@ -17,7 +17,7 @@ const Sproject = ({ content, id }) => {
   return (
     <section>
       <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)]  lg:hidden">
-        <h6 className="text-[#e6f1ff] text-xl">Spotify Profile</h6>
+        <h6 className="text-[#e6f1ff] text-xl"> {name}</h6>
         <hr className="border-[#64ffda] w-6/12 mt-2" />
         <p className="text-base text-[#a8b8d1] pt-6 ">
           A web app for visualizing personalized Spotify data. View your top
@@ -26,23 +26,36 @@ const Sproject = ({ content, id }) => {
           recommended tracks based on your existing playlists and more.
         </p>
         <div className="text-theme-text-highlight flex gap-x-3  gap-y-2 flex-wrap pt-6">
-          <p>React</p>
-          <p>Mongo DB</p>
-          <p>Express</p>
-          <p>Heroku</p>
-          <p>React</p>
+          {stack.map((item) => {
+            return <p key={item}>{item}</p>;
+          })}
         </div>
         <div className=" flex gap-x-3  gap-y-2 flex-wrap pt-6">
-          <Link href="/">
-            <a target="_blank" rel="noopener noreferrer">
-              <Github />
-            </a>
-          </Link>
-          <Link href="/">
-            <a target="_blank" rel="noopener noreferrer">
-              <External />
-            </a>
-          </Link>
+          {code_front_url && (
+            <Link href={code_front_url}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex  items-center group"
+              >
+                <Github />
+              </a>
+            </Link>
+          )}
+          {code_back_url && (
+            <Link href={code_back_url}>
+              <a target="_blank" rel="noopener noreferrer">
+                <Github />
+              </a>
+            </Link>
+          )}
+          {live_url && (
+            <Link href={live_url}>
+              <a target="_blank" rel="noopener noreferrer">
+                <External />
+              </a>
+            </Link>
+          )}
         </div>
       </div>
       <div

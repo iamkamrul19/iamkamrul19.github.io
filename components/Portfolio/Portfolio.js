@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import Sproject from "../Sproject/Sproject";
 
 const Portfolio = ({ portfolioList }) => {
+  const [loading, setLoading] = useState(false);
   const [AllProject, setAllProject] = useState([...portfolioList]);
-
   const [selected, setSelected] = useState("All");
   const handleCatagories = (type) => {
+    setLoading(true);
+    const result = portfolioList.filter((item) => {
+      if (item.tag.includes(type)) return item;
+    });
+    setAllProject(result);
     setSelected(type);
-    console.log(type);
+    setLoading(false);
   };
 
   return (
@@ -27,7 +32,7 @@ const Portfolio = ({ portfolioList }) => {
       </div>
       <div className="flex flex-row  gap-5 justify-center lg:justify-start">
         <button
-          onClick={() => handleCatagories("All")}
+          onClick={() => handleCatagories("all")}
           className={`${
             selected != "All"
               ? "text-theme-text-sub-title"
@@ -37,7 +42,7 @@ const Portfolio = ({ portfolioList }) => {
           All
         </button>
         <button
-          onClick={() => handleCatagories("Full Stack")}
+          onClick={() => handleCatagories("full-stack")}
           className={`${
             selected != "Full Stack"
               ? "text-theme-text-sub-title "
@@ -47,7 +52,7 @@ const Portfolio = ({ portfolioList }) => {
           Full Stack
         </button>
         <button
-          onClick={() => handleCatagories("Front End")}
+          onClick={() => handleCatagories("front-end")}
           className={`${
             selected != "Front End"
               ? "text-theme-text-sub-title"
@@ -58,9 +63,20 @@ const Portfolio = ({ portfolioList }) => {
         </button>
       </div>
       <div className="">
-        {AllProject.map((item, idx) => {
-          return <Sproject key={idx} id={idx} content={item} />;
-        })}
+        {!AllProject.length || loading ? (
+          <div className="flex justify-center items-center">
+            <div className="loader">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        ) : (
+          AllProject.map((item, idx) => {
+            return <Sproject key={idx} id={idx} content={item} />;
+          })
+        )}
       </div>
     </div>
   );

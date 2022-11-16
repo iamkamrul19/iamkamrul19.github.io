@@ -31,7 +31,7 @@ export async function getStaticProps() {
   }
   return {
     props: {
-      portfolioList: result,
+      portfolioList: result ? result : [],
     },
   };
 }
