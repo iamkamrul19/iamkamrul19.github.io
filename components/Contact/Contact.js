@@ -1,12 +1,12 @@
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Call, Email, Git, Linkedin } from "../SVG/SVG";
 const Contact = () => {
   const [formData, setFormData] = useState({});
-
+  const form = useRef();
   const handleInputChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -16,16 +16,29 @@ const Contact = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("submit", formData);
     try {
-      const response = await axios.get(
-        `https://webhook.site/f7f46081-c7ae-4011-9add-085f63a9a655?name=${formData.name}&email=${formData.email}&subject=${formData.subject}&message=${formData.message}`
+      const result = await emailjs.sendForm(
+        "service_fhuvgr5",
+        "gmail",
+        form.current,
+        "user_LiKtigRFtgHVAUzAqiUAr"
       );
-      console.log("response :", response);
-      toast.success("Form submitted successfully");
+
+      if (result.text == "OK") {
+        toast.success("Mail sent!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        form.current.reset();
+      }
     } catch (error) {
-      toast.error("Error !, Try again.");
-      console.log("error", error);
+      console.log("error :", error);
     }
   };
 
@@ -113,7 +126,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full md:w-8/12 lg:w-1/2 mt-10 py-[10px]">
-            <form onSubmit={(e) => handleSubmit(e)}>
+            <form ref={form} onSubmit={(e) => handleSubmit(e)}>
               <input
                 required
                 type="text"
