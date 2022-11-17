@@ -3,10 +3,10 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="overflow-hidden lg:[100vh]" id="home">
+    <div className="overflow-hidden lg:[100vh] relative" id="home">
       <section className="container md:mx-auto mx-3 ">
         <div
-          className=" h-[200%] w-4/12  absolute -top-16 -left-80 2xl:-left-96 -rotate-12"
+          className=" h-[200%] w-4/12 absolute -top-16 -left-80 2xl:-left-96 -rotate-12"
           style={{
             background: "linear-gradient(180deg, #64ffda -40%, #0a192f 50%)",
           }}
@@ -28,7 +28,7 @@ const Hero = () => {
               Engineering from Primeasia University in Dhaka, Bangladesh.
             </p>
 
-            <div className="flex flex-col md:flex-row  gap-5 w-full">
+            <div className="flex flex-col md:flex-row  gap-5 w-full justify-center lg:justify-start">
               <Link href="/#about">
                 <a className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 lg:w-2/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
                   More About Me

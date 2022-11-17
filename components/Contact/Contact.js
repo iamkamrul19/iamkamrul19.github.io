@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Call, Email, Git, Linkedin } from "../SVG/SVG";
 const Contact = () => {
   const [formData, setFormData] = useState({});
-  const form = useRef();
+
   const handleInputChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -14,6 +14,7 @@ const Contact = () => {
     newFromData[field] = value;
     setFormData(newFromData);
   };
+  const form = useRef();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
