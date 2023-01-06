@@ -39,7 +39,7 @@ const Experience = () => {
                   <p className="text-theme-text-sub-title pb-2">
                     Front End Developer
                   </p>
-                  <ul className="text-sm lg:text-base font-normal  text-gray-400 list-disc -ml-[1px]">
+                  <ul className="text-sm lg:text-base font-normal  text-gray-400 list-disc -ml-[2px] lg:-ml-[1px]">
                     <li className="py-2 lg:py-3">
                       Developed and maintained company website using HTML, CSS,
                       and JavaScript (Next js).
@@ -84,7 +84,7 @@ const Experience = () => {
                   <p className="text-theme-text-sub-title pb-2">
                     Front End Developer
                   </p>
-                  <ul className="text-sm lg:text-base font-normal  text-gray-400 list-disc -ml-[1px]">
+                  <ul className="text-sm lg:text-base font-normal  text-gray-400 list-disc -ml-[2px] lg:-ml-[1px]">
                     <li className="py-2 lg:py-3">
                       Developed and maintained company website using HTML, CSS,
                       and JavaScript (React js).

@@ -13,19 +13,23 @@ const Hero = () => {
         ></div>
         <div className="md:h-[100vh] md: flex flex-col lg:flex-row gap-y-10 justify-center relative">
           <div className="h-[100vh] md:h-auto flex flex-col justify-center md:items-center lg:items-start  w-full">
-            <h1 className="text-theme-text-title text-3xl lg:text-[18px] font-bold pb-1 lg:leading-[60px] ">
+            <h4 className="text-theme-text-title text-3xl lg:text-[18px] font-bold pb-1 lg:leading-[60px] ">
               Hi, my name is
-            </h1>
-            <h1 className=" text-theme-text-title text-3xl lg:text-[55px] font-bold pb-1 lg:leading-[60px] ">
-              MD KAMRUL HASAN
-            </h1>
-            <h4 className="text-2xl font-bold text-theme-text-sub-title pb-3 lg:text-[30px] lg:leading-[60px] ">
-              Software Engineer | Front-end Developer
             </h4>
-            <p className="text-theme-text-normal text-sm md:text-center lg:text-left lg:text-lg ">
-              I work for NEXT Ventures as a software engineer. In 2021, I
-              received my Bachelor of Science in Computer Science and
-              Engineering from Primeasia University in Dhaka, Bangladesh.
+            <h4 className=" text-theme-text-title text-3xl lg:text-[55px] font-bold pb-1 lg:leading-[60px] ">
+              MD KAMRUL HASAN
+            </h4>
+            <h1 className="text-2xl font-bold text-theme-text-sub-title pb-3 lg:text-[30px] lg:leading-[60px] ">
+              Software Engineer | Front-end Developer
+            </h1>
+            <p className="text-theme-text-normal text-sm md:text-center lg:text-left lg:text-lg 2xl:w-8/12">
+              As a responsive web developer, I specialize in building websites
+              that look great and function seamlessly on all devices. With a
+              focus on mobile-first design, I ensure that your website is
+              optimized for the growing number of users accessing the web on
+              their smartphones and tablets. Whether you need a simple landing
+              page or a complex web application, I have the skills and
+              experience to deliver the best possible results.
             </p>
 
             <div className="flex flex-col md:flex-row  gap-5 w-full justify-center lg:justify-start">
