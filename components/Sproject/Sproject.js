@@ -64,7 +64,7 @@ const Sproject = ({ content, id }) => {
         }`}
       >
         <div className="w-2/3">
-          <Image alt="image" src="/p1.png" height={600} width={952} />
+          <Image alt="image" src={img_url} height={600} width={952} />
         </div>
         <div className="w-1/3   relative">
           <h6
@@ -79,10 +79,7 @@ const Sproject = ({ content, id }) => {
               id % 2 !== 0 ? "left-0 text-left" : "right-0 text-right"
             }`}
           >
-            A web app for visualizing personalized Spotify data. View your top
-            artists, top tracks, recently played tracks, and detailed audio
-            information about each track. Create and save new playlists of
-            recommended tracks based on your existing playlists and more.
+            {info}
           </p>
 
           <div

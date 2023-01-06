@@ -89,7 +89,7 @@ const About = () => {
               height={300}
               width={300}
               alt="my image"
-              src="/1.svg"
+              src="/my.svg"
               layout="responsive"
               className="rounded-[1px]"
             />
