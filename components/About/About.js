@@ -25,16 +25,17 @@ const About = () => {
             PERSONAL INFOS
           </h4>
           <p className="text-theme-text-normal py-5">
-            Hello! My name is Kamrul Hasan, and I like to produce content for
-            the internet. experienced software engineer with a track record of
-            success in the IT industry. Competent in: software architecture,
-            project management, MongoDB, leadership, team management, vanilla
-            js, react js, next js, node js, etc. I studied business and
-            commerce, but my enthusiasm and curiosity have shaped who I am now.
-            I work as a technical instructor for a significant portion of my
-            time, therefore I enjoy imparting my knowledge and talents to
-            others. find easy solutions to difficult problems and enjoy solving
-            real-world issues.
+            As a front-end developer, I specialize in creating visually stunning
+            and user-friendly websites using HTML, CSS, and JavaScript. With a
+            strong background in design and a focus on delivering the best
+            possible user experience, I am dedicated to helping my clients
+            achieve their online goals. Whether you need a simple landing page
+            or a complex web application, I have the skills and experience to
+            bring your vision to life. <br /> <br />
+            In my current role at Next Ventures, I have had the opportunity to
+            work on a wide range of projects. I have a proven track record of
+            delivering high-quality work on time, and I am always looking for
+            new challenges and opportunities to grow as a developer.
           </p>
           <div className=" flex gap-5 my-2 items-center ">
             <Link href="https://github.com/kamrul-hasan01/">
