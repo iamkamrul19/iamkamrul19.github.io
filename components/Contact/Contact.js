@@ -166,12 +166,13 @@ const Contact = () => {
               >
                 SEND
               </button>
-              <p className="pt-5 text-theme-text-highlight">
+              <p className="pt-5 text-theme-text-highlight  group">
                 Don’t like forms?{" "}
                 <a
-                  href="mailto:name@email.com"
+                  href="mailto:kmarulhasan.kh02@email.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="group-hover:text-white"
                 >
                   {" "}
                   Send me an email. 👋
