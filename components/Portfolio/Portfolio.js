@@ -64,7 +64,7 @@ const Portfolio = ({ portfolioList }) => {
       </div>
       <div className="">
         {!AllProject.length || loading ? (
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center w-1/2 ">
             <div className="loader">
               <div></div>
               <div></div>

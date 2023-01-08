@@ -64,7 +64,13 @@ const Sproject = ({ content, id }) => {
         }`}
       >
         <div className="w-2/3">
-          <Image alt="image" src={img_url} height={600} width={952} />
+          <Image
+            alt="image"
+            src={img_url}
+            height={600}
+            width={952}
+            className="rounded-lg hover:scale-x-125 hover:scale-y-110 transition delay-150 duration-300 ease-in-out"
+          />
         </div>
         <div className="w-1/3   relative">
           <h6
