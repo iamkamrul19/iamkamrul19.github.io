@@ -13,8 +13,9 @@ const index = ({ portfolioList }) => {
       <Hero />
       <About />
       <Skills />
-      <Experience />
       <Portfolio portfolioList={portfolioList} />
+      <Experience />
+
       <Contact />
     </>
   );
