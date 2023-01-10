@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { Git, Linkedin } from "../SVG/SVG";
 
 const Hero = () => {
   return (
@@ -31,16 +32,43 @@ const Hero = () => {
               page or a complex web application, I have the skills and
               experience to deliver the best possible results.
             </p>
+            <div className=" flex gap-x-5 mt-5 mb-2 items-center ">
+              <Link href="https://github.com/kamrul-hasan01/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+                >
+                  <Git />
 
-            <div className="flex flex-col md:flex-row  gap-5 w-full justify-center lg:justify-start">
+                  <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                    Github
+                  </span>
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/kamrul-hasan01/">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+                >
+                  <Linkedin />
+
+                  <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                    Linkedin
+                  </span>
+                </a>
+              </Link>
+            </div>
+            <div className="flex    gap-x-5 w-full justify-center lg:justify-start">
               <Link href="/#about">
-                <a className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 lg:w-2/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
+                <a className="text-theme-text-highlight   mt-6 border  w-6/12 md:w-4/12 lg:w-2/12 py-3 rounded-full border-[#64ffda] text-sm  lg:text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
                   More About Me
                 </a>
               </Link>
 
               <Link href="/#contact">
-                <a className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-4/12 lg:w-2/12  py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
+                <a className="text-theme-text-highlight   mt-6 border  w-6/12 md:w-4/12 lg:w-2/12  py-3 rounded-full border-[#64ffda] text-sm lg:text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
                   Get In Touch
                 </a>
               </Link>

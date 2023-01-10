@@ -37,7 +37,7 @@ const About = () => {
             delivering high-quality work on time, and I am always looking for
             new challenges and opportunities to grow as a developer.
           </p>
-          <div className=" flex gap-5 my-2 items-center ">
+          <div className=" flex gap-x-5 my-2 items-center ">
             <Link href="https://github.com/kamrul-hasan01/">
               <a
                 target="_blank"
@@ -66,19 +66,19 @@ const About = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col md:flex-row  gap-5">
+          <div className="flex   gap-x-5">
             <Link href="https://drive.google.com/file/d/1Am_prNFpqaxvE8WfyRpG1R0fq_jNx1ZX/view?usp=sharing">
               <a
                 target="_blank"
                 download
-                className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-8/12 lg:w-5/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center"
+                className="text-theme-text-highlight   mt-6 border  w-6/12 md:w-8/12 lg:w-5/12 py-3 rounded-full border-[#64ffda] text-sm lg:text-lg active:scale-[0.95] transition ease-in-out button-animation text-center"
               >
                 Download Resume
               </a>
             </Link>
 
             <Link href="/#contact">
-              <a className="text-theme-text-highlight   mt-6 border  w-9/12 md:w-5/12 lg:w-5/12 py-3 rounded-full border-[#64ffda] text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
+              <a className="text-theme-text-highlight   mt-6 border  w-6/12 md:w-5/12 lg:w-5/12 py-3 rounded-full border-[#64ffda]  text-sm lg:text-lg active:scale-[0.95] transition ease-in-out button-animation text-center">
                 Contact
               </a>
             </Link>
@@ -90,9 +90,9 @@ const About = () => {
               height={300}
               width={300}
               alt="my image"
-              src="/my.svg"
+              src="/my.jpg"
               layout="responsive"
-              className="rounded-[1px]"
+              className="rounded-[4px]"
             />
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-r border-[#64ffda] absolute    -top-2 -right-2   "></div>
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-l border-[#64ffda] absolute    -top-2 -left-2   "></div>
