@@ -54,7 +54,7 @@ const Sproject = ({ content, id }) => {
         </div>
       </div>
       <div
-        className={`hidden lg:flex w-full mx-auto  my-20  items-center ${
+        className={` hidden lg:flex w-full mx-auto  my-20  items-center ${
           id % 2 !== 0 && "flex-row-reverse"
         }`}
       >
@@ -64,7 +64,7 @@ const Sproject = ({ content, id }) => {
             src={img_url}
             height={600}
             width={952}
-            className="rounded-lg hover:scale-x-125 hover:scale-y-110 transition delay-150 duration-300 ease-in-out"
+            className="rounded-lg hover:scale-105  transition delay-150 duration-300 ease-in-out "
           />
         </div>
         <div className="w-1/3   relative">
