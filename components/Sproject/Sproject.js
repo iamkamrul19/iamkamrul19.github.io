@@ -19,12 +19,7 @@ const Sproject = ({ content, id }) => {
       <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)]  lg:hidden">
         <h6 className="text-[#e6f1ff] text-xl"> {name}</h6>
         <hr className="border-[#64ffda] w-6/12 mt-2" />
-        <p className="text-base text-[#a8b8d1] pt-6 ">
-          A web app for visualizing personalized Spotify data. View your top
-          artists, top tracks, recently played tracks, and detailed audio
-          information about each track. Create and save new playlists of
-          recommended tracks based on your existing playlists and more.
-        </p>
+        <p className="text-base text-[#a8b8d1] pt-6 ">{info}</p>
         <div className="text-theme-text-highlight flex gap-x-3  gap-y-2 flex-wrap pt-6">
           {stack.map((item) => {
             return <p key={item}>{item}</p>;
