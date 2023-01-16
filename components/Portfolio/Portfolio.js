@@ -37,7 +37,7 @@ const Portfolio = ({ portfolioList }) => {
             selected != "All"
               ? "text-theme-text-sub-title"
               : "text-theme-text-highlight border-[#64ffda]"
-          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-lg active:scale-[0.95] transition ease-in-out`}
+          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-sm  lg:text-lg active:scale-[0.95] transition ease-in-out`}
         >
           All
         </button>
@@ -47,7 +47,7 @@ const Portfolio = ({ portfolioList }) => {
             selected != "Full Stack"
               ? "text-theme-text-sub-title "
               : "text-theme-text-highlight border-[#64ffda]"
-          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-lg active:scale-[0.95] transition ease-in-out`}
+          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-sm  lg:text-lg active:scale-[0.95] transition ease-in-out`}
         >
           Full Stack
         </button>
@@ -57,7 +57,7 @@ const Portfolio = ({ portfolioList }) => {
             selected != "Front End"
               ? "text-theme-text-sub-title"
               : "text-theme-text-highlight border-[#64ffda]"
-          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-lg active:scale-[0.95] transition ease-in-out`}
+          } button-animation    mt-6 border  w-4/12 md:w-2/12 lg:w-2/12 py-2 lg:py-3  rounded-full  text-sm  lg:text-lg active:scale-[0.95] transition ease-in-out`}
         >
           Front End
         </button>
