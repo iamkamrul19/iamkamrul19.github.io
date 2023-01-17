@@ -20,7 +20,7 @@ const index = ({ portfolioList }) => {
     </>
   );
 };
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let result;
   try {
     const response = await fetch(
