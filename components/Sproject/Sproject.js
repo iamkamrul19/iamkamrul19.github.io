@@ -59,24 +59,31 @@ const Sproject = ({ content, id }) => {
         }`}
       >
         <div className="w-2/3">
-          <Image
-            alt="image"
-            src={img_url}
-            height={600}
-            width={952}
-            className="rounded-lg hover:scale-105  transition delay-150 duration-300 ease-in-out "
-          />
+          <div className="w-[753px] hover:scale-105  transition duration-300 ease-in-out">
+            <Image
+              alt="image"
+              src={img_url}
+              height={474}
+              width={753}
+              layout={"responsive"}
+              className="rounded-lg w-full "
+            />
+          </div>
         </div>
         <div className="w-1/3   relative">
           <h6
-            className={`text-[#e6f1ff] text-xl pb-10  ${
+            className={`text-[#e6f1ff] text-xl pb-10 hover:text-theme-text-highlight  ${
               id % 2 !== 0 ? "text-left" : "text-right"
             }`}
           >
-            {name}
+            <Link href={live_url}>
+              <a target="_blank" rel="noopener noreferrer">
+                {name}
+              </a>
+            </Link>
           </h6>
           <p
-            className={`text-lg text-[#a8b8d1] p-6   bg-theme-bg w-[600px] absolute right-0 rounded-xl shadow-[0px_0px_3px_0px_rgba(255,255,255,0.1)] ${
+            className={`text-lg text-[#a8b8d1] p-6   bg-theme-bg w-[600px] absolute right-0 rounded-xl shadow-[0px_0px_14px_2px_rgba(100,255,218,0.11)] ${
               id % 2 !== 0 ? "left-0 text-left" : "right-0 text-right"
             }`}
           >

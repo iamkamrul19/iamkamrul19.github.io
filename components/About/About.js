@@ -22,7 +22,7 @@ const About = () => {
       <div className="flex flex-col-reverse gap-y-8 lg:gap-y-0 md:flex-row lg:items-center lg:justify-center">
         <div className="w-full md:w-1/2 ">
           <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
-            PERSONAL INFOS
+            PERSONAL INFO
           </h4>
           <p className="text-theme-text-normal py-5">
             As a front-end developer, I specialize in creating visually stunning

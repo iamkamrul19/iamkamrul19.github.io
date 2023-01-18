@@ -23,7 +23,7 @@ const Experience = () => {
             <div className=" mx-auto mt-5 ">
               <ol className="relative border-l border-theme-text-sub-title">
                 <li className="mb-10 ml-4">
-                  <div className="absolute w-3 h-3  rounded-full -left-1.5 border  border-gray-900 bg-theme-text-highlight"></div>
+                  <div className="absolute w-3 h-3  rounded-full -left-1.5 border  border-gray-900 bg-theme-text-highlight "></div>
                   <time className="mb-1 text-sm font-normal leading-none text-gray-500">
                     March 2022 - Present
                   </time>
@@ -31,7 +31,7 @@ const Experience = () => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-semibold  text-white block"
+                      className="text-lg font-semibold  text-white block hover:text-theme-text-highlight"
                     >
                       NEXT VENTURES
                     </a>
@@ -67,7 +67,7 @@ const Experience = () => {
                   </ul>
                 </li>
                 <li className="mb-10 ml-4">
-                  <div className="absolute w-3 h-3  rounded-full -left-1.5 border  border-gray-900 bg-theme-text-highlight"></div>
+                  <div className="absolute w-3 h-3  rounded-full -left-1.5 border  border-gray-900 bg-theme-text-highlight "></div>
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                     DECEMBER 2021 - February 2022
                   </time>
@@ -76,7 +76,7 @@ const Experience = () => {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-lg font-semibold  text-white block"
+                      className="text-lg font-semibold  text-white block hover:text-theme-text-highlight"
                     >
                       Triox Technology LTD
                     </a>

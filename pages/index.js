@@ -15,7 +15,6 @@ const index = ({ portfolioList }) => {
       <Skills />
       <Portfolio portfolioList={portfolioList} />
       <Experience />
-
       <Contact />
     </>
   );
