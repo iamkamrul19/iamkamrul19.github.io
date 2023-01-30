@@ -84,21 +84,30 @@ const About = () => {
             </Link>
           </div>
         </div>
-        <div className="w-full md:w-1/2 pt-20 md:pt-40  lg:pt-10 ">
+        <div className="w-full md:w-1/2 pt-20 md:pt-40  lg:pt-10 mx-auto">
           <div className="w-[180px] h-[180px] lg:w-[300px] lg:h-[300px]  rounded mx-auto relative  z-[9999px]">
             <Image
               height={300}
               width={300}
-              alt="my image"
+              alt="kamrul, front end developer"
               src="/my.jpg"
               layout="responsive"
-              className="rounded-[4px]"
+              className="rounded-[50%]"
             />
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-r border-[#64ffda] absolute    -top-2 -right-2   "></div>
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-l border-[#64ffda] absolute    -top-2 -left-2   "></div>
 
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-l border-[#64ffda] absolute     -bottom-2 -left-2  "></div>
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-r border-[#64ffda] absolute     -bottom-2 -right-2  "></div>
+            {/* <div className="absolute -top-[89px] -left-[86px] rotate">
+              <Image
+                src="/img_bg.svg"
+                height={500}
+                width={500}
+                alt="image"
+                layout="fixed"
+              />
+            </div> */}
           </div>
         </div>
       </div>

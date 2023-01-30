@@ -142,3 +142,15 @@
     transform: translate(24px, 0);
   }
 }
+.rotate {
+  animation: rotation 50s infinite linear;
+  -webkit-animation: rotation 50s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

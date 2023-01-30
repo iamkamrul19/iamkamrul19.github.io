@@ -59,16 +59,19 @@ const Sproject = ({ content, id }) => {
         }`}
       >
         <div className="w-2/3">
-          <div className="w-[753px] hover:scale-105  transition duration-300 ease-in-out">
+          <Link
+            href={live_url}
+            className="w-[753px] hover:scale-105  transition duration-300 ease-in-out "
+          >
             <Image
-              alt="image"
+              alt="kamrul, front end developer"
               src={img_url}
               height={474}
               width={753}
               layout={"responsive"}
-              className="rounded-lg w-full "
+              className="rounded-lg w-full cursor-pointer relative hover:scale-95  transition duration-300 ease-in-out"
             />
-          </div>
+          </Link>
         </div>
         <div className="w-1/3   relative">
           <h6
