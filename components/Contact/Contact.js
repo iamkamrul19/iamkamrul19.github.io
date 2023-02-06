@@ -50,7 +50,7 @@ const Contact = () => {
     >
       <div className="">
         <ToastContainer />
-        <div className="relative">
+        <div className="relative" data-aos="zoom-in-up">
           <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block">
             CONTACT
           </h3>
@@ -59,7 +59,7 @@ const Contact = () => {
           </h4>
         </div>
         <div className="flex flex-col lg:flex-row justify-center items-center 2xl:items-center">
-          <div className="w-full md:w-8/12 lg:w-1/2">
+          <div className="w-full md:w-8/12 lg:w-1/2" data-aos="fade-up-right">
             <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
               DON&apos;T BE SHY!
             </h4>
@@ -126,7 +126,10 @@ const Contact = () => {
               </Link>
             </div>
           </div>
-          <div className="w-full md:w-8/12 lg:w-1/2 mt-10 py-[10px]">
+          <div
+            className="w-full md:w-8/12 lg:w-1/2 mt-10 py-[10px]"
+            data-aos="fade-up-left"
+          >
             <form ref={form} onSubmit={(e) => handleSubmit(e)}>
               <input
                 required

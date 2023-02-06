@@ -7,7 +7,7 @@
     @apply font-poppins;
   }
   body {
-    @apply bg-[#0A192F];
+    @apply bg-[#0A192F] overflow-x-hidden;
   }
 }
 @layer utilities {

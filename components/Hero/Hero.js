@@ -12,7 +12,10 @@ const Hero = () => {
             background: "linear-gradient(180deg, #64ffda -40%, #0a192f 50%)",
           }}
         ></div>
-        <div className="md:h-[100vh] md: flex flex-col lg:flex-row gap-y-10 justify-center relative">
+        <div
+          className="md:h-[100vh] md: flex flex-col lg:flex-row gap-y-10 justify-center relative"
+          data-aos="fade-left"
+        >
           <div className="h-[100vh] md:h-auto flex flex-col justify-center md:items-center lg:items-start  w-full">
             <h4 className="text-theme-text-title text-3xl lg:text-[18px] font-bold pb-1 lg:leading-[60px] ">
               Hi, my name is

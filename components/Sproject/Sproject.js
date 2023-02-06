@@ -20,7 +20,7 @@ const Sproject = ({ content, id }) => {
     router.push(url);
   };
   return (
-    <section>
+    <section data-aos={id % 2 === 0 ? "fade-left" : "fade-right"}>
       <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)]  lg:hidden">
         <h6 className="text-[#e6f1ff] text-xl"> {name}</h6>
         <hr className="border-[#64ffda] w-6/12 mt-2" />

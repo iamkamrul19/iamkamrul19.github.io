@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <div className="container md:mx-auto px-5 pt-10" id="experience">
       <div className="">
-        <div className="relative">
+        <div className="relative" data-aos="zoom-in-up">
           <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block uppercase">
             Experience
           </h3>
@@ -14,7 +14,7 @@ const Experience = () => {
           </h4>
         </div>
 
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row" data-aos="zoom-in-down">
           <div className="w-full md:w-8/12 lg:w-full mx-auto">
             <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
               Where I&apos;ve Worked

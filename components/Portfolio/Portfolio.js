@@ -17,7 +17,7 @@ const Portfolio = ({ portfolioList }) => {
 
   return (
     <div className="container md:mx-auto px-5 pt-10" id="portfolio">
-      <div className="relative">
+      <div className="relative" data-aos="zoom-in-up">
         <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block">
           WORKS
         </h3>
@@ -26,11 +26,17 @@ const Portfolio = ({ portfolioList }) => {
         </h4>
       </div>
       <div className="pt-5">
-        <h4 className="text-theme-text-title text-2xl font-semibold text-center lg:text-start">
+        <h4
+          className="text-theme-text-title text-2xl font-semibold text-center lg:text-start"
+          data-aos="fade-right"
+        >
           Some Things I&apos;ve Built
         </h4>
       </div>
-      <div className="flex flex-row  gap-5 justify-center lg:justify-start">
+      <div
+        className="flex flex-row  gap-5 justify-center lg:justify-start"
+        data-aos="fade-left"
+      >
         <button
           onClick={() => handleCatagories("all")}
           className={`${

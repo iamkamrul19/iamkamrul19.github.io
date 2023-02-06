@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <div className="container md:mx-auto px-5 pt-10" id="about">
-      <div className="relative">
+      <div className="relative" data-aos="zoom-in-up">
         <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block">
           RESUME
         </h3>
@@ -20,7 +20,7 @@ const About = () => {
         </h4>
       </div>
       <div className="flex flex-col-reverse gap-y-8 lg:gap-y-0 md:flex-row lg:items-center lg:justify-center">
-        <div className="w-full md:w-1/2 ">
+        <div className="w-full md:w-1/2 " data-aos="fade-up-right">
           <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
             PERSONAL INFO
           </h4>
@@ -84,7 +84,10 @@ const About = () => {
             </Link>
           </div>
         </div>
-        <div className="w-full md:w-1/2 pt-20 md:pt-40  lg:pt-10 mx-auto">
+        <div
+          className="w-full md:w-1/2 pt-20 md:pt-40  lg:pt-10 mx-auto"
+          data-aos="fade-up-left"
+        >
           <div className="w-[180px] h-[180px] lg:w-[300px] lg:h-[300px]  rounded mx-auto relative  z-[9999px]">
             <Image
               height={300}
