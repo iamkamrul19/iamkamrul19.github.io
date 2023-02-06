@@ -64,7 +64,7 @@ export const Git = () => {
       x="0px"
       y="0px"
       viewBox="0 0 291.32 291.32"
-      style={{ enableBackground: "new 0 0 291.32 291.32;" }}
+      style={{ enableBackground: "new 0 0 291.32 291.32" }}
     >
       <g>
         <path

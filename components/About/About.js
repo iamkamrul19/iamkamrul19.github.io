@@ -92,7 +92,7 @@ const About = () => {
               alt="kamrul, front end developer"
               src="/my.jpg"
               layout="responsive"
-              className="rounded-[50%]"
+              className="rounded-[1%]"
             />
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-r border-[#64ffda] absolute    -top-2 -right-2   "></div>
             <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-l border-[#64ffda] absolute    -top-2 -left-2   "></div>

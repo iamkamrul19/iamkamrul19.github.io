@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { External, Github } from "../SVG/SVG";
+
 const Sproject = ({ content, id }) => {
   const {
     name,
@@ -13,7 +15,10 @@ const Sproject = ({ content, id }) => {
     code_front_url,
     code_back_url,
   } = content;
-
+  const router = useRouter();
+  const handleImageClick = (url) => {
+    router.push(url);
+  };
   return (
     <section>
       <div className="w-[10/12] md:w-8/12 mx-auto  my-5  p-5 rounded-xl shadow-[0px_0px_3px_1px_rgba(255,255,255,0.39)]  lg:hidden">
@@ -59,19 +64,17 @@ const Sproject = ({ content, id }) => {
         }`}
       >
         <div className="w-2/3">
-          <Link
-            href={live_url}
-            className="w-[753px] hover:scale-105  transition duration-300 ease-in-out "
-          >
+          <div className="w-[753px] hover:scale-105  transition duration-300 ease-in-out">
             <Image
               alt="kamrul, front end developer"
               src={img_url}
               height={474}
               width={753}
               layout={"responsive"}
-              className="rounded-lg w-full cursor-pointer relative hover:scale-95  transition duration-300 ease-in-out"
+              className="rounded-lg w-full cursor-pointer"
+              onClick={() => handleImageClick(live_url)}
             />
-          </Link>
+          </div>
         </div>
         <div className="w-1/3   relative">
           <h6
