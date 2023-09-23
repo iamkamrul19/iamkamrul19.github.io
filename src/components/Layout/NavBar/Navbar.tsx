@@ -56,14 +56,6 @@ const Navbar = () => {
   const [isHamburger, setIsHamburger] = useState(false);
 
   const handleMenuClick = () => {
-    console.log("testse");
-    // setIsHamburger(!isHamburger);
-    // const button = document.querySelector(".menu");
-    // button?.classList.toggle("opened");
-    // button?.setAttribute(
-    //   "aria-expanded",
-    //   button?.classList?.contains("opened")
-    // );
     setIsHamburger(!isHamburger);
     const button = document.querySelector(".menu");
     button?.classList.toggle("opened");
