@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&family=Cabin+Condensed:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,15 +6,53 @@
 
 @layer base {
   html {
-    @apply font-poppins;
+    @apply font-bai_jamjure;
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-[#0A192F] !overflow-x-hidden;
+    @apply bg-[#0a192f] overflow-x-hidden;
   }
 }
 
 @layer components {
+  /* name css  */
+  .text-line {
+    display: block;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 5s linear forwards infinite,
+      filling 5s ease-in forwards infinite,
+      reverse-filling 5s ease-out forwards 10s infinite;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes filling {
+    0%,
+    45% {
+      fill: #64ffda;
+      fill-opacity: 0;
+    }
+    50%,
+    100% {
+      fill: #64ffda;
+      fill-opacity: 1;
+    }
+  }
+  @keyframes reverse-filling {
+    0% {
+      fill: #64ffda;
+      fill-opacity: 1;
+    }
+    10%,
+    55% {
+      fill: #64ffda;
+      fill-opacity: 0;
+    }
+  }
+  /* name css  */
   /* burger menu css  start */
   .menu {
     background-color: transparent;
@@ -59,213 +97,6 @@
     stroke-width: 6;
   }
   /* burger menu css end   */
-
-  header {
-    background: transparent;
-  }
-  .active {
-    color: #64ffda;
-  }
-
-  .button-animation {
-    overflow: hidden;
-    transition: all 0.35s;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -ms-transition: all 0.35s;
-    -o-transition: all 0.35s;
-  }
-
-  .button-animation {
-    position: relative;
-    z-index: 2;
-  }
-
-  .button-animation:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #64ffdb77;
-    transition: all 0.35s;
-  }
-
-  .button-animation:hover {
-    color: white;
-    border: 1px solid #64ffdb77;
-  }
-
-  .button-animation:hover:after {
-    width: 100%;
-  }
-  .svg-animation {
-    overflow: hidden;
-    transition: all 0.35s;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    -ms-transition: all 0.35s;
-    -o-transition: all 0.35s;
-  }
-
-  .svg-animation {
-    position: relative;
-    z-index: 2;
-  }
-
-  .svg-animation:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #64ffdb77;
-    transition: all 0.35s;
-  }
-
-  .svg-animation:hover {
-    color: white;
-    border: 1px solid #64ffdb77;
-  }
-
-  .svg-animation:hover:after {
-    width: 100%;
-  }
-}
-.loader {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.loader div {
-  position: absolute;
-  top: 33px;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #64ffda;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-.loader div:nth-child(1) {
-  left: 8px;
-  animation: loader1 0.6s infinite;
-}
-.loader div:nth-child(2) {
-  left: 8px;
-  animation: loader2 0.6s infinite;
-}
-.loader div:nth-child(3) {
-  left: 32px;
-  animation: loader2 0.6s infinite;
-}
-.loader div:nth-child(4) {
-  left: 56px;
-  animation: loader3 0.6s infinite;
-}
-@keyframes loader1 {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes loader3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-@keyframes loader2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(24px, 0);
-  }
-}
-.rotate {
-  animation: rotation 50s infinite linear;
-  -webkit-animation: rotation 50s infinite linear;
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-.animate-blink {
-  animation: blink 1s infinite;
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* Style the cursor */
-.cursor {
-  width: 2px; /* Initial width */
-  height: 20px; /* Initial height */
-  background-color: #000; /* Initial color */
-  animation: blink 1s infinite; /* Apply the blink animation */
-}
-
-/* Change cursor color and height on hover */
-.cursor:hover {
-  background-color: #ff0000; /* Change color to red */
-  height: 24px; /* Change height on hover */
-}
-.text-line {
-  stroke-dasharray: 500;
-  stroke-dashoffset: 500;
-  animation: dash 5s linear forwards infinite,
-    filling 5s ease-in forwards infinite,
-    reverse-filling 5s ease-out forwards 10s infinite;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes filling {
-  0%,
-  45% {
-    fill: #64ffda;
-    fill-opacity: 0;
-  }
-  50%,
-  100% {
-    fill: #64ffda;
-    fill-opacity: 1;
-  }
-}
-
-@keyframes reverse-filling {
-  0% {
-    fill: #64ffda;
-    fill-opacity: 1;
-  }
-  10%,
-  55% {
-    fill: #64ffda;
-    fill-opacity: 0;
-  }
 }
 @layer utilities {
 }

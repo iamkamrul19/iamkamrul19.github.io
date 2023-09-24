@@ -9,30 +9,35 @@ const config: Config = {
   theme: {
     container: {
       padding: {
-        DEFAULT: "1rem",
+        DEFAULT: "1.3rem",
         sm: "2rem",
-        xl: "0rem",
+        md: "5.5rem",
+        lg: "6.6rem",
+        xl: "8rem",
+        "2xl": "10rem",
       },
       center: true,
       screens: {
         default: "100%",
-        sm: "640px",
-        md: "768px",
+        sm: "360px",
+        md: "680px",
         lg: "1024px",
-        xl: "1170px",
+        xl: "1200px",
+        "2xl": "1200px",
       },
     },
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      bai_jamjure: ["Bai Jamjuree", "sans-serif"],
+      cobin: ["Cabin Condensed", "sans-serif"],
     },
 
     extend: {
       colors: {
-        "theme-text-normal": "#8892b0",
-        "theme-text-highlight": "#64ffda",
-        "theme-text-title": "#ccd6f6",
-        "theme-text-sub-title": "#8892b0",
-        "theme-bg": "#0A192F",
+        "text-normal": "#8892b0",
+        "text-highlight": "#64ffda",
+        "text-info": "#ccd6f6",
+        "text-sub-title": "#8892b0",
+        "theme-bg": "#0a192f",
       },
     },
   },

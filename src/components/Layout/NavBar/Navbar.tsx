@@ -1,4 +1,4 @@
-import { Name } from "@/components/SVGIcon";
+import useScreenWidth from "@/components/hooks/useScreenWidth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -6,19 +6,9 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const nabList = [
     {
-      name: "Home",
-      link: "/",
-      newTab: false,
-    },
-    {
       name: "Story",
       link: "/#about",
       newTab: false,
-    },
-    {
-      name: "Resume",
-      link: "/resume",
-      newTab: true,
     },
     {
       name: "Experience",
@@ -31,16 +21,22 @@ const Navbar = () => {
       newTab: false,
     },
     {
-      name: "Contact Me",
+      name: "Contact",
       link: "/#contact",
       newTab: false,
+    },
+
+    {
+      name: "Resume",
+      link: "/resume",
+      newTab: true,
     },
   ];
 
   const [scrollY, setScrollY] = useState(0);
-
+  const screenWidth = useScreenWidth();
+  console.log("screenWidth :", screenWidth);
   const [isScrollingUp, setIsScrollingUp] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -56,11 +52,10 @@ const Navbar = () => {
   const [isHamburger, setIsHamburger] = useState(false);
 
   const handleMenuClick = () => {
+    if (window?.screen?.width > 1024) return;
     setIsHamburger(!isHamburger);
     const button = document.querySelector(".menu");
     button?.classList.toggle("opened");
-
-    // Convert boolean to string before setting the attribute
     button?.setAttribute(
       "aria-expanded",
       button?.classList?.contains("opened") ? "true" : "false"
@@ -76,48 +71,32 @@ const Navbar = () => {
     }
   }, [isHamburger]);
   const router = useRouter();
+
   return (
     <>
       <header
-        className={`  ${
-          isScrollingUp && scrollY
-            ? "sticky top-0 bg-[#0A192F] shadow-xl transform translate-y-0 transition-transform duration-300 z-[999]"
+        className={`${
+          (isScrollingUp && scrollY) || isHamburger
+            ? "bg-[#0a192fd9] shadow-[0_10px_30px_-10px_#020c1bb3] sticky top-0 z-[999] backdrop-filter backdrop-blur-[10px] translate-y-0"
             : scrollY
-            ? "overflow-hidden sticky top-0 bg-transparent transform -translate-y-full transition-transform duration-300"
-            : "overflow-hidden"
-        }`}
+            ? "translate-y-[-100%] bg-[#0a192fd9] shadow-[0_10px_30px_-10px_#020c1bb3] sticky top-0 z-[999] backdrop-filter backdrop-blur-[10px]"
+            : "bg-transparent"
+        }    transition-all duration-300 transform translate-y-0 `}
       >
-        <nav className="container flex justify-between items-center">
-          <Link href="#about" className={`w-[58%] md:w-auto flex`}>
-            <Name />
+        <nav className="container flex justify-between items-center h-[60px] relative">
+          <Link
+            href={"#hero"}
+            className="text-[24px] text-text-highlight uppercase font-cobin"
+          >
+            Kamrul Hasan{" "}
           </Link>
 
-          <ul className="hidden lg:flex">
-            {nabList?.map((item) => {
-              return (
-                <li key={item.link} className="my-1 xl:mx-3">
-                  <Link
-                    href={item.link}
-                    target={item?.newTab ? "_blank" : "_self"}
-                    id="hero"
-                    className={`px-4 font-semibold text-white  lg:hover:text-theme-text-highlight ${
-                      item?.link === router?.asPath &&
-                      "text-theme-text-highlight"
-                    } `}
-                  >
-                    {item?.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-
           <button
-            className="menu lg:hidden"
+            className="menu lg:hidden relative z-[999]"
             onClick={handleMenuClick}
             aria-label="Main Menu"
           >
-            <svg width="60" height="60" viewBox="0 0 100 100">
+            <svg viewBox="0 0 100 100" className="h-[40px] w-[40px]">
               <path
                 className="line line1"
                 d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -129,27 +108,41 @@ const Navbar = () => {
               />
             </svg>
           </button>
-        </nav>
-
-        <div
-          className={` fixed  z-50 overflow-hidden duration-200 min-h-screen shadow-lg ${
-            isHamburger ? "w-full right-0 bg-[#0A192F]" : "w-[0px] right-[-20%]"
-          }  flex flex-col gap-y-[15px]  pl-6 pt-5 md:pt-10 lg:hidden `}
-        >
-          <ul className="items-start xl:flex-row xl:items-center gap-x-[30px] gap-y-[15px] xl:ml-[54px] flex flex-col">
-            {nabList.map((item, index) => (
-              <li key={index}>
-                <Link
-                  href={item.link}
-                  onClick={() => handleMenuClick()}
-                  className={`text-bae font-semibold font-Manrope text-white`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+          <ul
+            className={`pl-10 lg:pl-0 lg:items-center flex-col lg:flex-row absolute gap-x-3 gap-y-5 lg:static         
+          
+            ${
+              isHamburger
+                ? "w-[247px] h-[calc(100vh)] lg:w-auto z-[50px] top-0 right-[-32px] md:right-[-119px] bg-[#112240] lg:bg-transparent pt-[80px] flex transition-transform duration-300 ease-in"
+                : "hidden lg:flex"
+            }
+          
+          `}
+          >
+            {nabList?.map((item) => {
+              return (
+                <li key={item?.link}>
+                  <Link
+                    href={item.link}
+                    onClick={() => handleMenuClick()}
+                    target={item?.newTab ? "_blank" : "_self"}
+                    className={`font-semibold  text-[13px] px-1 ${
+                      item?.name === "Resume"
+                        ? " lg:ml-5 border-[.1px] border-[#64ffda] rounded-[2px] py-[0.73rem] px-[1rem] text-text-highlight"
+                        : ""
+                    }     ${
+                      router?.asPath === item?.link
+                        ? "text-text-highlight"
+                        : "text-text-info"
+                    } `}
+                  >
+                    {item?.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
-        </div>
+        </nav>
       </header>
     </>
   );

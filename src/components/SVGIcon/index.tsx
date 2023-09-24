@@ -1088,11 +1088,8 @@ export const MongoDBIcon = () => {
 export const Name = () => {
   return (
     <svg
-      height={80}
-      stroke="#64ffda"
       strokeWidth={2}
-      className="text-line text-[25px] lg:text-[40px]"
-      width="100%"
+      className="text-line text-[24px] lg:text-3xl leading-8 h-[80px] stroke-[#64ffda]"
     >
       <text x="50%" dominantBaseline="middle" textAnchor="middle" y="50%">
         KAMRUL HASAN
