@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     container: {
       padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
+        DEFAULT: "2rem",
+        // sm: "5rem",
         md: "5rem",
         lg: "6.6rem",
         xl: "8rem",
@@ -19,8 +19,8 @@ const config: Config = {
       center: true,
       screens: {
         default: "100%",
-        sm: "100%",
-        md: "780px",
+        sm: "680px",
+        md: "768px",
         lg: "1024px",
         xl: "1200px",
         "2xl": "1200px",

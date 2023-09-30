@@ -57,7 +57,7 @@ export const Call = () => {
 export const Git = () => {
   return (
     <svg
-      className="h-[40px] w-[40px] cursor-pointer relative z-1 transition-all duration-300"
+      className="h-[30px] w-[30px] cursor-pointer relative z-1 transition-all duration-300 -rotate-90"
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ export const Git = () => {
 export const Linkedin = () => {
   return (
     <svg
-      className="h-[40px] w-[40px] cursor-pointer relative z-1 transition-all duration-300"
+      className="h-[30px] w-[30px] cursor-pointer relative z-1 transition-all duration-300 -rotate-90"
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ export const Linkedin = () => {
           cx="56.098"
           cy="56.097"
           r="56.098"
-          style={{ fill: "#007AB9" }}
+          style={{ fill: "#1b7692" }}
         />
         <g>
           <path
