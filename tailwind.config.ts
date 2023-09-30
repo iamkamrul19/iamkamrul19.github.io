@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     container: {
       padding: {
-        DEFAULT: "1.3rem",
+        DEFAULT: "1rem",
         sm: "2rem",
-        md: "5.5rem",
+        md: "5rem",
         lg: "6.6rem",
         xl: "8rem",
         "2xl": "10rem",
@@ -19,16 +19,16 @@ const config: Config = {
       center: true,
       screens: {
         default: "100%",
-        sm: "360px",
-        md: "680px",
+        sm: "100%",
+        md: "780px",
         lg: "1024px",
         xl: "1200px",
         "2xl": "1200px",
       },
     },
     fontFamily: {
-      bai_jamjure: ["Bai Jamjuree", "sans-serif"],
-      cobin: ["Cabin Condensed", "sans-serif"],
+      arOneSans: ["AR One Sans", "sans-serif"],
+      sans: ["Open Sans", "sans-serif"],
     },
 
     extend: {
