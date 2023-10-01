@@ -31,7 +31,7 @@ export const myProjects = [
   {
     name: "Incenteco",
     stack: ["Next JS", "JavaScript", "Tailwind CSS"],
-    img_url: "/ncenteco-2.png",
+    img_url: "/incenteco-2.png",
     live_url: "https://incenteco.com/",
   },
   {
