@@ -1,4 +1,4 @@
-import Link from "next/link";
+import CommonLink from "../Common/CommonLink";
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
           MD Kamrul Hasan
         </h1>
         <p className="text-text-sub-title font-semibold text-[30px] xl:text-[70px] leading-0">
-          I build things for the web.
+          Software Engineer | Front-End Developer
         </p>
         <p className="text-text-sub-title text-base xl:text-xl lg:w-10/12 text-justify pt-2">
           I&apos;m front-end developer proficient in{" "}
@@ -20,12 +20,7 @@ const Hero = () => {
           skill set encompasses end-to-end web development, ensuring exceptional
           user experiences.
         </p>
-        <Link
-          href={`/#about-me`}
-          className="block text-text-highlight border-[#64ffda] border-[1px] rounded py-[10px] px-10 text-sm font-semibold mt-5 relative before:absolute  before:w-[104%] before:h-[105%] before:left-0 before:-bottom-2 before:border-[#64ffda] before:border-b-[1px] before:rounded before:border-r-[1px] before:z-[-1]"
-        >
-          More About Me
-        </Link>
+        <CommonLink link={`/#about`} name={`More About Me`} />
       </div>
     </section>
   );
