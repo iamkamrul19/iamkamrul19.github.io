@@ -10,10 +10,10 @@ const LeftRightPart = () => {
   return (
     <>
       <div className=" items-center gap-x-5 rotate-90 left-[-80px] bottom-[90px] fixed hidden md:flex">
-        <Link target="_blank" href={GitLink}>
+        <Link target="_blank" href={GitLink} className=" -rotate-90">
           <Git />
         </Link>
-        <Link target="_blank" href={LinkEdinLink}>
+        <Link target="_blank" href={LinkEdinLink} className=" -rotate-90">
           <Linkedin />
         </Link>
 

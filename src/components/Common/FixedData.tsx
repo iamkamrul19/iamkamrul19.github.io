@@ -15,7 +15,60 @@ export const skills = [
   { name: ["Git", "Figma", "Chrome Dev Tools"] },
 ];
 
-export const projects = [];
+export const myProjects = [
+  {
+    name: "The TechSci",
+    stack: ["Next JS", "Tailwind CSS"],
+    img_url: "/techSci.png",
+    live_url: "https://www.thetechsci.com/",
+  },
+  {
+    name: "Movie Scope",
+    stack: ["Next JS", "Node JS", "Mongo DB"],
+    img_url: "/movie.png",
+    live_url: "https://movie-scope.vercel.app/",
+  },
+  {
+    name: "Bicycle Habitat",
+    stack: ["React JS", "Node JS", "Firebase"],
+
+    img_url: "/cycle.png",
+    live_url: "https://bicyle-habitat.firebaseapp.com/",
+  },
+  {
+    name: "Victory Travel",
+    stack: ["React JS", "Node JS", "Express", "Firebase"],
+    img_url: "/travel.png",
+    live_url: "https://victory-travel-k17h02.web.app/",
+  },
+  {
+    name: "Denti-Care",
+    stack: ["React JS", "Node JS", "Express", "Firebase"],
+
+    img_url: "/doctor.png",
+    live_url: "https://denticare-k17h02.web.app/",
+  },
+  {
+    name: "Ema-John",
+    stack: ["React JS", "Node JS", "Mongo DB"],
+    img_url: "/emajohn.png",
+    live_url: "https://ema-jhon-k17h02.web.app/",
+  },
+  {
+    name: "Developers",
+    tag: ["all", "front-end"],
+    stack: ["React JS", "Bootstrap", "HTML", "CSS"],
+
+    img_url: "/developers.png",
+    live_url: "https://developers-center.netlify.app/",
+  },
+  {
+    name: "Jerins Parlour",
+    stack: ["React JS", "Bootstrap", "HTML", "CSS"],
+    img_url: "/parlour.png",
+    live_url: "https://jerins-parlour.netlify.app/",
+  },
+];
 
 export const experiences = [
   {
@@ -72,5 +125,34 @@ export const experiences = [
       "Developed multiple landing pages with a focus on conversion optimization and user engagement.",
       "Next js, TypeScript, Javascript, CSS, Tailwind,",
     ],
+  },
+];
+
+export const nabList = [
+  {
+    name: "Story",
+    link: "/#about",
+    newTab: false,
+  },
+  {
+    name: "Experience",
+    link: "/#experience",
+    newTab: false,
+  },
+  {
+    name: "Projects",
+    link: "/#projects",
+    newTab: false,
+  },
+  {
+    name: "Contact",
+    link: "/#contact",
+    newTab: false,
+  },
+
+  {
+    name: "Resume",
+    link: "/resume",
+    newTab: true,
   },
 ];

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { experiences } from "../Common/FixedData";
-import Title from "./Title";
+import Title from "../Common/Title";
 
 const Experience = () => {
   const [selected, setSelected] = useState(experiences[0]);

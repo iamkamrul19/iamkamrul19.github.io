@@ -1,38 +1,10 @@
+import { nabList } from "@/components/Common/FixedData";
 import useScreenWidth from "@/components/hooks/useScreenWidth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const nabList = [
-    {
-      name: "Story",
-      link: "/#about",
-      newTab: false,
-    },
-    {
-      name: "Experience",
-      link: "/#experience",
-      newTab: false,
-    },
-    {
-      name: "Projects",
-      link: "/#portfolio",
-      newTab: false,
-    },
-    {
-      name: "Contact",
-      link: "/#contact",
-      newTab: false,
-    },
-
-    {
-      name: "Resume",
-      link: "/resume",
-      newTab: true,
-    },
-  ];
-
   const [scrollY, setScrollY] = useState(0);
   const screenWidth = useScreenWidth();
   console.log("screenWidth :", screenWidth);

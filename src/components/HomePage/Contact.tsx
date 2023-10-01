@@ -1,90 +1,25 @@
-import Link from "next/link";
-import { Call, Email, Git, Linkedin } from "../SVGIcon";
+import CommonLink from "../Common/CommonLink";
+import { EmailLink } from "../Common/FixedData";
 
 const Contact = () => {
   return (
-    <div
-      className="container md:mx-auto px-5 pt-10 py-10 lg:py-32"
-      id="contact"
-    >
-      <div className="">
-        <div className="relative">
-          <h3 className="text-center text-[70px] lg:text-[120px] font-black text-[#6363633f] hidden md:block">
-            CONTACT
-          </h3>
-          <h4 className="text-3xl  lg:text-[56px] font-bold text-center text-theme-text-title md:absolute top-9  lg:top-[70px] left-0 right-0">
-            GET IN <span className="text-theme-text-highlight">TOUCH</span>{" "}
-          </h4>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center 2xl:items-center">
-          <div className="w-full md:w-8/12 lg:w-1/2">
-            <h4 className="text-theme-text-sub-title text-xl font-semibold pt-5">
-              DON&apos;T BE SHY!
-            </h4>
-            <p className="text-theme-text-normal py-5 lg:pr-5">
-              Feel free to get in touch with me. I am always open to discussing
-              new projects, creative ideas or opportunities to be part of your
-              visions.
-            </p>
-
-            <div className="flex gap-3 items-center pt-2">
-              <div className="">
-                <Email />
-              </div>
-              <div className="">
-                <p className="text-theme-text-sub-title text-lg m-0">MAIL ME</p>
-                <a
-                  href="mailto:kamrulhasan.kh02@gmail.com"
-                  className="text-theme-text-highlight m-y-0"
-                >
-                  kamrulhasan.kh02@gmail.com
-                </a>
-              </div>
-            </div>
-            <div className="flex gap-3 items-center pt-2">
-              <div className="">
-                <Call />
-              </div>
-              <div className="">
-                <p className="text-theme-text-sub-title text-lg m-0">CALL ME</p>
-                <a
-                  href="tel:+8801950458002"
-                  className="text-theme-text-highlight m-y-0"
-                >
-                  +8801950458002
-                </a>
-              </div>
-            </div>
-            <div className=" flex gap-5 my-5 items-center ">
-              <Link
-                href="https://github.com/kamrul-hasan01/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
-              >
-                <Git />
-
-                <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
-                  Github
-                </span>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/kamrul-hasan01/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
-              >
-                <Linkedin />
-
-                <span className="text-theme-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
-                  Linkedin
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
+    <section className="container " id="contact">
+      <p className="text-text-info text-center text-[60px] font-semibold">
+        Get In Touch
+      </p>
+      <p className="text-center w-7/12 mx-auto text-text-sub-title text-lg">
+        My inbox is always open. Whether you have a question or just want to say
+        hello, I&apos;ll try my best to get back to you! Feel free to mail me
+        about any relevant job updates.
+      </p>
+      <div className="flex justify-center mt-3">
+        <CommonLink
+          link={"mailTo:" + EmailLink}
+          name={`Mail Me`}
+          blank={true}
+        />
       </div>
-    </div>
+    </section>
   );
 };
 

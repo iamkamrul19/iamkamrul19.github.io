@@ -1,3 +1,4 @@
+import Footer from "./Footer/Footer";
 import LeftRightPart from "./LeftRightPart/LeftRightPart";
 import Navbar from "./NavBar/Navbar";
 interface LayoutProps {
@@ -7,11 +8,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
-      <main >
+      <main>
         <Navbar />
-        <LeftRightPart/>
+        <LeftRightPart />
         {props.children}
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );

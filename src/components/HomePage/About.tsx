@@ -2,7 +2,7 @@ import Image from "next/image";
 import CommonLink from "../Common/CommonLink";
 import { ResumeLink, skills } from "../Common/FixedData";
 
-import Title from "./Title";
+import Title from "../Common/Title";
 
 const About = () => {
   return (
