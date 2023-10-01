@@ -1,25 +1,10 @@
 import Image from "next/image";
 import CommonLink from "../Common/CommonLink";
-import { ResumeLink } from "../Link";
+import { ResumeLink, skills } from "../Common/FixedData";
+
 import Title from "./Title";
 
 const About = () => {
-  const skills = [
-    {
-      name: [
-        "JavaScript",
-        "TypeScript",
-        "React JS",
-        "Next JS",
-        "Redux",
-        "HTML",
-      ],
-    },
-    { name: ["CSS3", "SCSS", "Tailwind CSS", "Bootstrap"] },
-    { name: ["Node JS", "Express JS"] },
-    { name: ["MongoDB", "Firebase"] },
-    { name: ["Git", "Figma", "Chrome Dev Tools"] },
-  ];
   return (
     <div className="container" id="about">
       <Title title={"About Me"} />

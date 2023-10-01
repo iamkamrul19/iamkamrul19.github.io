@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,6 @@
   html {
     @apply font-sans;
     scroll-behavior: smooth;
-
   }
   body {
     @apply bg-[#0a192f] overflow-x-hidden;
@@ -98,6 +97,22 @@
     stroke-width: 6;
   }
   /* burger menu css end   */
+
+  .experience-active {
+    animation: experience-active 0.3s ease-in-out;
+    transition: color 0.5s ease-in-out;
+  }
+
+  @keyframes experience-active {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 @layer utilities {
 }

@@ -1,4 +1,8 @@
-import { EmailLink, GitLink, LinkEdinLink } from "@/components/Link";
+import {
+  EmailLink,
+  GitLink,
+  LinkEdinLink,
+} from "@/components/Common/FixedData";
 import { Git, Linkedin } from "@/components/SVGIcon";
 import Link from "next/link";
 
