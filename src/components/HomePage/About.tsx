@@ -6,12 +6,12 @@ import Title from "../Common/Title";
 
 const About = () => {
   return (
-    <div className="container" id="about">
+    <div className="container py-12 lg:py-16 overflow-hidden" id="about">
       <Title title={"About Me"} />
 
-      <div className="flex  flex-wrap py-10">
-        <div className="w-7/12">
-          <p className="text-text-sub-title text-lg leading-6">
+      <div className="flex  flex-wrap flex-col-reverse gap-y-5 lg:flex-row py-10">
+        <div className="lg:w-7/12">
+          <p className="text-text-sub-title text-base lg:text-lg leading-6">
             I&apos;m <span className="text-text-info">MD Kamrul Hasan</span>, an
             experienced front-end developer specializing in{" "}
             <span className="text-text-info">e-commerce websites</span>, regular
@@ -41,7 +41,7 @@ const About = () => {
               {skills.map((skill, index) => {
                 return (
                   <li
-                    className=" flex gap-x-2 pl-5 relative before:absolute before:content-['▹'] before:left-0 before:top-[-2px] before:text-[#64ffda] before:text-lg"
+                    className="flex-wrap flex gap-x-2 pl-5 relative before:absolute before:content-['▹'] before:left-0 before:top-[-2px] before:text-[#64ffda] before:text-lg"
                     key={index}
                   >
                     {skill.name.map((name, index) => {
@@ -61,8 +61,8 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="w-5/12">
-          <div className="w-[180px] h-[180px] lg:w-[300px] lg:h-[300px]  rounded mx-auto relative  z-[9999px]">
+        <div className="lg:w-5/12">
+          <div className="w-[180px] h-[180px] lg:w-[300px] lg:h-[300px]  rounded lg:mx-auto relative  z-[9999px]">
             <Image
               height={300}
               width={300}

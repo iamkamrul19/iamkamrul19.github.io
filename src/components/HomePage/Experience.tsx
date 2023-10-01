@@ -6,11 +6,11 @@ import Title from "../Common/Title";
 const Experience = () => {
   const [selected, setSelected] = useState(experiences[0]);
   return (
-    <div className="container" id="experience">
+    <div className="container py-12 lg:py-16 overflow-hidden" id="experience">
       <Title title={"Where I've Worked"} />
 
-      <div className="py-10 flex flex-wrap">
-        <div className="w-3/12">
+      <div className="py-10 flex flex-wrap gap-y-5">
+        <div className="w-full lg:w-3/12">
           <ul className="border-l-[1px] border-[#8892b0] pl-5">
             {experiences.map((experience, index) => {
               return (
@@ -30,16 +30,16 @@ const Experience = () => {
             })}
           </ul>
         </div>
-        <div className={`w-9/12 pl-5 flex flex-col gap-y-1`}>
-          <div className="flex items-center">
-            <h3 className="text-text-info text-lg font-bold">
+        <div className={`w-full lg:w-9/12 pl-5 flex flex-col gap-y-1`}>
+          <div className="flex lg:items-center flex-col md:flex-row gap-y-2 mb-3">
+            <h3 className="text-text-info text-lg font-bold whitespace-nowrap">
               {selected?.title}
             </h3>
             <Link
               href={selected?.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 text-text-highlight"
+              className="lg:ml-2 text-text-highlight"
             >
               @{selected?.company}
             </Link>

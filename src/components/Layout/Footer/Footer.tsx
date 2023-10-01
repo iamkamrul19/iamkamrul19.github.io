@@ -34,11 +34,11 @@ const Footer = () => {
         isScrollingUp
           ? "bg-[#1224408f] sticky bottom-0 z-[999] backdrop-filter backdrop-blur-[20px] translate-y-0 transition-all duration-300"
           : "bg-[#1224408f] backdrop-filter backdrop-blur-[2px]"
-      } py-10 mt-5`}
+      } py-10 mt-5 overflow-hidden`}
     >
       <div className="container flex flex-wrap gap-y-5">
-        <div className="w-4/12">
-          <p className="text-xl text-text-info font-bold">Links</p>
+        <div className="w-1/2 md:w-3/12 xl:w-4/12">
+          <p className="text-lg lg:text-xl text-text-info font-bold">Links</p>
           <ul className="flex flex-col gap-y-1 mt-2">
             {nabList.map((item, index) => {
               return (
@@ -55,8 +55,42 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div className="w-4/12">
-          <p className="text-xl text-text-info font-bold">My Contacts</p>
+        <div className="w-1/2 md:w-4/12  md:hidden">
+          <p className="text-lg lg:text-xl text-text-info font-bold">
+            Follow Me on
+          </p>
+          <ul className="flex flex-col gap-y-5 gap-x-4 mt-2">
+            <Link
+              href={GitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+            >
+              <Git />
+
+              <span className="text-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                Github
+              </span>
+            </Link>
+
+            <Link
+              href={LinkEdinLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+            >
+              <Linkedin />
+
+              <span className="text-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
+                Linkedin
+              </span>
+            </Link>
+          </ul>
+        </div>
+        <div className="md:w-5/12 xl:w-4/12">
+          <p className="text-lg lg:text-xl text-text-info font-bold">
+            My Contacts
+          </p>
           <ul className="flex flex-col gap-y-1 mt-2">
             <li>
               <Link
@@ -77,7 +111,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-4/12">
+        <div className="md:w-4/12 hidden md:block">
           <p className="text-xl text-text-info font-bold">Follow Me on</p>
           <ul className="flex  gap-x-4 mt-2">
             <Link

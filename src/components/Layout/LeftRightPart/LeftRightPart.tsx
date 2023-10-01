@@ -19,7 +19,7 @@ const LeftRightPart = () => {
 
         <hr className="w-[400px] h-[1px] border-[#a8b2d1]" />
       </div>
-      <div className=" items-center gap-x-5 rotate-90 right-[-210px]  bottom-[170px] fixed hidden md:flex">
+      <div className=" items-center gap-x-5 rotate-90 right-[-240px]  bottom-[170px] fixed hidden md:flex">
         <Link
           target="_blank"
           className="text-text-info text-sm"

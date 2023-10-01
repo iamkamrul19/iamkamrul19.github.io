@@ -17,56 +17,53 @@ export const skills = [
 
 export const myProjects = [
   {
-    name: "The TechSci",
+    name: "FundenNext",
+    stack: ["Next JS", "TypeScript", "Tailwind CSS"],
+    img_url: "/fundednext.png",
+    live_url: "https://fundednext.com/",
+  },
+  {
+    name: "GrowthNext",
+    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
+    img_url: "/growthNext.png",
+    live_url: "https://growthnext.com/",
+  },
+  {
+    name: "Incenteco",
+    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
+    img_url: "/incenteco.png",
+    live_url: "https://incenteco.com/",
+  },
+  {
+    name: "Afilo",
     stack: ["Next JS", "Tailwind CSS"],
+    img_url: "/afilo.png",
+    live_url: "https://afilo.io/",
+  },
+  {
+    name: "UqiDev",
+    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
+    img_url: "/UqiDev.png",
+    live_url: "https://www.uqidev.com/",
+  },
+  {
+    name: "TehSci",
+    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
     img_url: "/techSci.png",
-    live_url: "https://www.thetechsci.com/",
+    live_url: "https://www.techsci.io/",
   },
   {
-    name: "Movie Scope",
-    stack: ["Next JS", "Node JS", "Mongo DB"],
-    img_url: "/movie.png",
-    live_url: "https://movie-scope.vercel.app/",
-  },
-  {
-    name: "Bicycle Habitat",
+    name: "Bycycle Habitat",
     stack: ["React JS", "Node JS", "Firebase"],
-
     img_url: "/cycle.png",
     live_url: "https://bicyle-habitat.firebaseapp.com/",
   },
-  {
-    name: "Victory Travel",
-    stack: ["React JS", "Node JS", "Express", "Firebase"],
-    img_url: "/travel.png",
-    live_url: "https://victory-travel-k17h02.web.app/",
-  },
-  {
-    name: "Denti-Care",
-    stack: ["React JS", "Node JS", "Express", "Firebase"],
 
-    img_url: "/doctor.png",
-    live_url: "https://denticare-k17h02.web.app/",
-  },
   {
     name: "Ema-John",
     stack: ["React JS", "Node JS", "Mongo DB"],
     img_url: "/emajohn.png",
     live_url: "https://ema-jhon-k17h02.web.app/",
-  },
-  {
-    name: "Developers",
-    tag: ["all", "front-end"],
-    stack: ["React JS", "Bootstrap", "HTML", "CSS"],
-
-    img_url: "/developers.png",
-    live_url: "https://developers-center.netlify.app/",
-  },
-  {
-    name: "Jerins Parlour",
-    stack: ["React JS", "Bootstrap", "HTML", "CSS"],
-    img_url: "/parlour.png",
-    live_url: "https://jerins-parlour.netlify.app/",
   },
 ];
 

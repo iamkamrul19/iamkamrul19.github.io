@@ -7,14 +7,20 @@ import { External } from "../SVGIcon";
 const Projects = () => {
   return (
     <>
-      <section className="container" id="projects">
+      <section
+        className="container  py-12 lg:py-16 overflow-hidden"
+        id="projects"
+      >
         <Title title={"Some Things I've Built"} />
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap  pt-5">
           {myProjects.map((project, index) => {
             return (
-              <div className="w-4/12 p-2" key={index}>
-                <div className="bg-[#1224408f] p-[14px] border-[#8892b0] hover:border-[#64ffda] border-[1px] rounded group cursor-pointer overflow-hidden hover:scale-[104%] transition-all  duration-300">
+              <div
+                className="w-full md:w-1/2 lg:w-4/12 py-2 md:p-2"
+                key={index}
+              >
+                <div className="bg-[#1224408f] p-2 md:p-[14px] border-[#8892b0] hover:border-[#64ffda] border-[1px] rounded group cursor-pointer overflow-hidden hover:scale-[104%] transition-all  duration-300">
                   <div className="relative">
                     <img
                       src={project?.img_url}
@@ -41,7 +47,7 @@ const Projects = () => {
                     {project?.name}
                   </Link>
                   <div className="text-text-sub-title text-sm  flex items-center flex-wrap">
-                    <p className="w-2/12">Stack :</p>
+                    <p className="w-2/12">Stack: </p>
                     <p className="flex justify-start w-10/12">
                       {project?.stack?.map((item: any, idx) => {
                         return (
