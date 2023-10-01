@@ -8,9 +8,34 @@ import {
 import { Call, Email, Git, Linkedin } from "@/components/SVGIcon";
 import Link from "next/link";
 
+import { useEffect, useState } from "react";
+
 const Footer = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrollingUp(currentScrollY < scrollY);
+      setScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollY]);
+
   return (
-    <footer className=" bg-[#1224408f] backdrop-filter backdrop-blur-[2px] py-10 mt-5">
+    <footer
+      className={`${
+        isScrollingUp
+          ? "bg-[#1224408f] sticky bottom-0 z-[999] backdrop-filter backdrop-blur-[20px] translate-y-0 transition-all duration-300"
+          : "bg-[#1224408f] backdrop-filter backdrop-blur-[2px]"
+      } py-10 mt-5`}
+    >
       <div className="container flex flex-wrap gap-y-5">
         <div className="w-4/12">
           <p className="text-xl text-text-info font-bold">Links</p>
@@ -43,7 +68,7 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                className="text-text-sub-title group-hover:text-text-highlight text-base flex items-center gap-x-2"
+                className="text-text-sub-title group hover:text-text-highlight text-base flex items-center gap-x-2"
                 href={"mailTo:" + EmailLink}
               >
                 <Email />

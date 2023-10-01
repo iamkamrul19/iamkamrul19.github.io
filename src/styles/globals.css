@@ -113,6 +113,24 @@
       transform: translateY(0);
     }
   }
+  .scrolling-up-animation {
+    background-color: #1224408f; /* Your background color */
+    position: sticky;
+    bottom: 0;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.3s ease; /* Adjust the animation duration as needed */
+  }
+
+  /* Scrolling down animation */
+  .scrolling-down-animation {
+    background-color: transparent; /* Reset background color */
+    transform: translateY(100%); /* Move the element off-screen */
+    opacity: 0;
+    transition: all 0.3s ease; /* Adjust the animation duration as needed */
+  }
 }
 @layer utilities {
 }

@@ -1,14 +1,13 @@
 import { nabList } from "@/components/Common/FixedData";
-import useScreenWidth from "@/components/hooks/useScreenWidth";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
-  const screenWidth = useScreenWidth();
-  console.log("screenWidth :", screenWidth);
+
   const [isScrollingUp, setIsScrollingUp] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
