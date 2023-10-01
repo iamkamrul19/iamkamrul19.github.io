@@ -9,7 +9,7 @@ import Link from "next/link";
 const LeftRightPart = () => {
   return (
     <>
-      <div className=" items-center gap-x-5 rotate-90 left-[-80px] bottom-[90px] fixed hidden md:flex">
+      <div className=" items-center gap-x-5 rotate-90 left-[-210px] bottom-[120px] fixed hidden md:flex">
         <Link target="_blank" href={GitLink} className=" -rotate-90">
           <Git />
         </Link>
@@ -17,9 +17,9 @@ const LeftRightPart = () => {
           <Linkedin />
         </Link>
 
-        <hr className="w-[120px] border-[#a8b2d1]" />
+        <hr className="w-[400px] h-[1px] border-[#a8b2d1]" />
       </div>
-      <div className=" items-center gap-x-5 rotate-90 right-[-105px] bottom-[90px] fixed hidden md:flex">
+      <div className=" items-center gap-x-5 rotate-90 right-[-210px]  bottom-[170px] fixed hidden md:flex">
         <Link
           target="_blank"
           className="text-text-info text-sm"
@@ -28,7 +28,7 @@ const LeftRightPart = () => {
           {EmailLink}
         </Link>
 
-        <hr className="w-[120px] border-[#a8b2d1]" />
+        <hr className="w-[400px] border-[#a8b2d1]" />
       </div>
     </>
   );
