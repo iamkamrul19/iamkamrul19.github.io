@@ -3,7 +3,10 @@ import { EmailLink } from "../Common/FixedData";
 
 const Contact = () => {
   return (
-    <section className="container py-12 lg:py-16 overflow-hidden" id="contact">
+    <section
+      className="container py-12 lg:py-16 2xl:py-24  overflow-hidden"
+      id="contact"
+    >
       <p className="text-text-info text-center text-2xl lg:text-[60px] font-semibold">
         Get In Touch
       </p>

@@ -100,7 +100,7 @@ export const experiences = [
     title: "MERN Stack Developer",
     company: "Triox Technologies LTD.",
     website: "/",
-    date: "December 2021 – February 2023",
+    date: "December 2022 – February 2023",
     description: [
       "Lead end-to-end development using the MERN stack for seamless application integration.",
       "Design and maintain MongoDB databases for efficient data handling.",
@@ -114,7 +114,7 @@ export const experiences = [
     title: "Front-End Developer",
     company: "UQIDEV Technologies",
     website: "/",
-    date: "January 2021 – Present",
+    date: "January 2021 – November 2022",
     description: [
       "Implemented RESTful API calls and handled responses to ensure seamless",
       "communication between the front-end and back-end systems.",

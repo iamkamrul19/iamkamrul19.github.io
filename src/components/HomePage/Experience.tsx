@@ -6,7 +6,10 @@ import Title from "../Common/Title";
 const Experience = () => {
   const [selected, setSelected] = useState(experiences[0]);
   return (
-    <div className="container py-12 lg:py-16 overflow-hidden" id="experience">
+    <div
+      className="container py-12 lg:py-16 2xl:py-20  overflow-hidden"
+      id="experience"
+    >
       <Title title={"Where I've Worked"} />
 
       <div className="py-10 flex flex-wrap gap-y-5">

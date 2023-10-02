@@ -8,12 +8,12 @@ const Projects = () => {
   return (
     <>
       <section
-        className="container  py-12 lg:py-16 overflow-hidden"
+        className="container py-12 lg:py-16 2xl:py-24  overflow-hidden"
         id="projects"
       >
         <Title title={"Some Things I've Built"} />
 
-        <div className="flex flex-wrap  pt-5">
+        <div className="flex flex-wrap  pt-5 lg:pt-10">
           {myProjects.map((project, index) => {
             return (
               <div

@@ -6,7 +6,10 @@ import Title from "../Common/Title";
 
 const About = () => {
   return (
-    <div className="container py-12 lg:py-16 overflow-hidden" id="about">
+    <div
+      className="container py-12 lg:py-16 2xl:py-20 overflow-hidden"
+      id="about"
+    >
       <Title title={"About Me"} />
 
       <div className="flex  flex-wrap flex-col-reverse gap-y-5 lg:flex-row py-10">
