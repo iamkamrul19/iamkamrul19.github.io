@@ -24,7 +24,7 @@ const Projects = () => {
                   <div className="relative">
                     <img
                       src={project?.img_url}
-                      alt=""
+                      alt="imkamrul, imkamrul98, kamrul, kamrul hasan, kamrul hasan portfolio, kamrul hasan website, kamrul hasan developer, kamrul hasan  frontend developer, kamrul hasan  frontend developer portfolio"
                       className="w-full object-cover rounded h-[200px]"
                     />
                     <div className="h-[100%] w-0 group-hover:w-full  bg-[#1224408f] top-0 absolute rounded opacity-0 translate-x-0 transition-all  duration-300 group-hover:opacity-100 backdrop-filter backdrop-blur-[2px]  flex justify-center items-center">
