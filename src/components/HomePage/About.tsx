@@ -19,7 +19,7 @@ const About = () => {
             experienced front-end developer specializing in{" "}
             <span className="text-text-info">e-commerce websites</span>, regular
             websites, and compelling landing pages. With{" "}
-            <span className="text-text-info">two years of experience</span>,
+            <span className="text-text-info">three years of experience</span>,
             I&apos;m dedicated to delivering exceptional user experiences.{" "}
             <br /> <br /> As a{" "}
             <span className="text-text-info">problem solver</span>, I thrive on
