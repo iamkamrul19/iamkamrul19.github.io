@@ -30,11 +30,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`${
-        isScrollingUp
-          ? "bg-[#1224408f] sticky bottom-0 z-[999] backdrop-filter backdrop-blur-[20px] translate-y-0 transition-all duration-300"
-          : "bg-[#1224408f] backdrop-filter backdrop-blur-[2px]"
-      } py-10 mt-5 overflow-hidden`}
+      className={`bg-[#1224408f] backdrop-filter backdrop-blur-[2px] py-10 mt-5 overflow-hidden`}
     >
       <div className="container flex flex-wrap gap-y-5">
         <div className="w-1/2 md:w-3/12 xl:w-4/12">
