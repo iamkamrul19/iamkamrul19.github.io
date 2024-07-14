@@ -9,7 +9,7 @@ const Hero = () => {
           MD Kamrul Hasan
         </h1>
         <p className="text-text-sub-title font-semibold text-[30px] xl:text-[45px] leading-0">
-          Software Engineer | Front-End Developer
+          Sr. Software Engineer | Tech Enthusiast
         </p>
         <p className="text-text-sub-title text-base xl:text-xl lg:w-10/12 text-justify pt-2">
           I&apos;m front-end developer proficient in{" "}

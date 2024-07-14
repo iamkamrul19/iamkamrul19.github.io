@@ -19,51 +19,8 @@ export const myProjects = [
   {
     name: "FundenNext",
     stack: ["Next JS", "TypeScript", "Tailwind CSS"],
-    img_url: "/fundednext.png",
+    img_url: "/fundednext.jpg",
     live_url: "https://fundednext.com/",
-  },
-  {
-    name: "GrowthNext",
-    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
-    img_url: "/growthNext.png",
-    live_url: "https://growthnext.com/",
-  },
-  {
-    name: "Incenteco",
-    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
-    img_url: "/incenteco-2.png",
-    live_url: "https://incenteco.com/",
-  },
-  {
-    name: "Afilo",
-    stack: ["Next JS", "Tailwind CSS"],
-    img_url: "/afilo.png",
-    live_url: "https://afilo.io/",
-  },
-  {
-    name: "UqiDev",
-    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
-    img_url: "/UqiDev.png",
-    live_url: "https://www.uqidev.com/",
-  },
-  {
-    name: "TehSci",
-    stack: ["Next JS", "JavaScript", "Tailwind CSS"],
-    img_url: "/techSci.png",
-    live_url: "https://www.techsci.io/",
-  },
-  {
-    name: "Bycycle Habitat",
-    stack: ["React JS", "Node JS", "Firebase"],
-    img_url: "/cycle.png",
-    live_url: "https://bicyle-habitat.firebaseapp.com/",
-  },
-
-  {
-    name: "Ema-John",
-    stack: ["React JS", "Node JS", "Mongo DB"],
-    img_url: "/emajohn.png",
-    live_url: "https://ema-jhon-k17h02.web.app/",
   },
 ];
 
