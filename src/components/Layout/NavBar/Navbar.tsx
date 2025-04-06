@@ -61,7 +61,7 @@ const Navbar = () => {
                     : "text-gray-300 hover:text-[#64ffda]"
                 } ${
                   item?.name === "Resume"
-                    ? "bg-[#112240] text-[#64ffda] px-4 py-2 rounded-md hover:bg-[#112240]/90 font-semibold shadow-md hover:shadow-lg transition-all duration-300 border border-[#64ffda]"
+                    ? "bg-[#64ffda] text-[#000000] px-4 py-2 rounded-md hover:bg-[#64ffda]/90 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#64ffda] hover:after:w-full after:transition-all after:duration-300"
                 }`}
               >
@@ -118,7 +118,7 @@ const Navbar = () => {
                     : "text-gray-300 hover:text-[#64ffda]"
                 } ${
                   item?.name === "Resume"
-                    ? "bg-[#112240] text-[#64ffda] px-6 py-2 rounded-md hover:bg-[#112240]/90 font-semibold shadow-md hover:shadow-lg transition-all duration-300 border border-[#64ffda]"
+                    ? "bg-[#64ffda] text-[#0a192f] px-6 py-2 rounded-md hover:bg-[#64ffda]/90 font-semibold shadow-md hover:shadow-lg transition-all duration-300"
                     : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#64ffda] hover:after:w-full after:transition-all after:duration-300"
                 }`}
               >

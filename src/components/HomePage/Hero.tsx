@@ -29,7 +29,7 @@ const Hero = () => {
     <section className="container relative overflow-hidden bg-[#0a192f]">
       <div className="min-h-screen flex items-center justify-start">
         <motion.div
-          className="max-w-5xl xl:max-w-6xl pt-20 lg:pt-0 px-4 sm:px-6 lg:px-8"
+          className="max-w-5xl xl:max-w-6xl pt-20 lg:pt-4 xl:pt-0 "
           variants={containerVariants}
           initial="hidden"
           animate="visible"
