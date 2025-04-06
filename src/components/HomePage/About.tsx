@@ -1,7 +1,5 @@
-import Image from "next/image";
 import CommonLink from "../Common/CommonLink";
 import { ResumeLink, skills } from "../Common/FixedData";
-
 import Title from "../Common/Title";
 
 const About = () => {
@@ -12,73 +10,70 @@ const About = () => {
     >
       <Title title={"About Me"} />
 
-      <div className="flex  flex-wrap flex-col-reverse gap-y-5 lg:flex-row py-10">
-        <div className="lg:w-7/12">
-          <p className="text-text-sub-title text-base lg:text-lg leading-6">
-            I&apos;m <span className="text-text-info">MD Kamrul Hasan</span>, an
-            experienced front-end developer specializing in{" "}
-            <span className="text-text-info">e-commerce websites</span>, regular
-            websites, and compelling landing pages. With{" "}
-            <span className="text-text-info">three years of experience</span>,
-            I&apos;m dedicated to delivering exceptional user experiences.{" "}
-            <br /> <br /> As a{" "}
-            <span className="text-text-info">problem solver</span>, I thrive on
-            challenges and consistently exceed expectations. I&apos;ve completed
-            my <span className="text-text-info">BSc in Computer Science</span>{" "}
-            in 2021, further strengthening my expertise.
+      <div className="max-w-3xl mx-auto">
+        <div className="space-y-6">
+          <p className="text-[#8892b0] text-base lg:text-lg leading-relaxed">
+            I&apos;m{" "}
+            <span className="text-[#64ffda] font-medium">MD Kamrul Hasan</span>,
+            a passionate and experienced{" "}
+            <span className="text-[#64ffda] font-medium">
+              Full Stack Developer
+            </span>{" "}
+            specializing in building modern web applications. With{" "}
+            <span className="text-[#64ffda] font-medium">
+              three years of experience
+            </span>{" "}
+            in web development, I focus on creating scalable and user-friendly
+            solutions that deliver exceptional experiences.
           </p>
-          <div className="flex justify-start my-3">
-            <CommonLink
-              link={ResumeLink}
-              name={`Download My Resume`}
-              blank={true}
-            />
-          </div>
 
-          <div className="mt-8">
-            <p className="text-text-sub-title">
-              Comprehensive Technical Expertise in Modern Web Development
-            </p>
-
-            <ul className="flex flex-col pt-3 gap-y-1">
-              {skills.map((skill, index) => {
-                return (
-                  <li
-                    className="flex-wrap flex gap-x-2 pl-5 relative before:absolute before:content-['▹'] before:left-0 before:top-[-2px] before:text-[#64ffda] before:text-lg"
-                    key={index}
-                  >
-                    {skill.name.map((name, index) => {
-                      return (
-                        <p
-                          key={index}
-                          className="text-text-sub-title text-base "
-                        >
-                          {name}
-                          {index !== skill.name.length - 1 && ", "}
-                        </p>
-                      );
-                    })}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <p className="text-[#8892b0] text-base lg:text-lg leading-relaxed">
+            As a{" "}
+            <span className="text-[#64ffda] font-medium">problem solver</span>{" "}
+            and{" "}
+            <span className="text-[#64ffda] font-medium">tech enthusiast</span>,
+            I thrive on challenges and consistently deliver high-quality
+            solutions. I hold a{" "}
+            <span className="text-[#64ffda] font-medium">
+              BSc in Computer Science
+            </span>{" "}
+            and am committed to continuous learning and improvement.
+          </p>
         </div>
-        <div className="lg:w-5/12">
-          <div className="w-[180px] h-[180px] lg:w-[300px] lg:h-[300px]  rounded lg:mx-auto relative  z-[9999px]">
-            <Image
-              height={300}
-              width={300}
-              alt="kamrul, front end developer"
-              src="/my.jpg"
-              layout="responsive"
-              className="rounded-[1%]"
-            />
-            <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-r border-[#64ffda] absolute    -top-2 -right-2   "></div>
-            <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-t border-l border-[#64ffda] absolute    -top-2 -left-2   "></div>
 
-            <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-l border-[#64ffda] absolute     -bottom-2 -left-2  "></div>
-            <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]   border-b border-r border-[#64ffda] absolute     -bottom-2 -right-2  "></div>
+        <div className="flex justify-start my-8">
+          <CommonLink
+            link={ResumeLink}
+            name={`Download My Resume`}
+            blank={true}
+          />
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-[#ccd6f6] text-xl font-semibold mb-6">
+            Technical Expertise
+          </h3>
+
+          <div className="flex flex-col gap-4">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="group flex items-center space-x-2 p-4 rounded-lg bg-[#112240]/50 hover:bg-[#112240]/80 transition-all duration-300 border border-[#233554] hover:border-[#64ffda]/30"
+              >
+                <span className="text-[#64ffda] flex-shrink-0">▹</span>
+                <div className="flex flex-wrap items-center gap-2">
+                  {skill.name.map((name, idx) => (
+                    <span
+                      key={idx}
+                      className="text-[#8892b0] text-base group-hover:text-[#64ffda] transition-colors duration-300"
+                    >
+                      {name}
+                      {idx !== skill.name.length - 1 && ","}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

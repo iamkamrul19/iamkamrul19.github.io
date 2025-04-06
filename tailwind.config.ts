@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     container: {
       padding: {
-        DEFAULT: "2rem",
+        DEFAULT: "1rem",
         // sm: "5rem",
-        md: "5rem",
-        lg: "6.6rem",
-        xl: "8rem",
-        "2xl": "10rem",
+        md: "4rem",
+        // lg: "6.6rem",
+        // xl: "8rem",
+        // "2xl": "10rem",
       },
       center: true,
       screens: {
-        default: "100%",
+        default: "99%",
         sm: "680px",
         md: "768px",
         lg: "1024px",

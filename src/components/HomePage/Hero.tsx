@@ -1,26 +1,105 @@
+import { motion } from "framer-motion";
 import CommonLink from "../Common/CommonLink";
+import { ResumeLink } from "../Common/FixedData";
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <section className="container overflow-hidden">
-      <div className="min-h-[70vh] lg:min-h-[70vh] flex flex-col  justify-center items-start gap-y-1">
-        <p className="text-text-highlight text-base">Hi, my name is</p>
-        <h1 className="text-text-info text-[35px] xl:text-[80px] font-semibold leading-0">
-          MD Kamrul Hasan
-        </h1>
-        <p className="text-text-sub-title font-semibold text-[30px] xl:text-[45px] leading-0">
-          Sr. Software Engineer | Tech Enthusiast
-        </p>
-        <p className="text-text-sub-title text-base xl:text-xl lg:w-10/12 text-justify pt-2">
-          I&apos;m front-end developer proficient in{" "}
-          <strong className="text-text-info">JavaScript, React js</strong>, and{" "}
-          <strong className="text-text-info">Next js</strong>, and I also have
-          expertise in backend development with{" "}
-          <strong className="text-text-info">Node js, Express js</strong>. My
-          skill set encompasses end-to-end web development, ensuring exceptional
-          user experiences.
-        </p>
-        <CommonLink link={`/#about`} name={`More About Me`} />
+    <section className="container relative overflow-hidden bg-[#0a192f]">
+      <div className="min-h-screen flex items-center justify-start">
+        <motion.div
+          className="max-w-5xl xl:max-w-6xl pt-20 lg:pt-0 px-4 sm:px-6 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div
+            variants={itemVariants}
+            className="inline-block bg-gradient-to-r from-[#64ffda] to-[#64ffda]/50 text-transparent bg-clip-text"
+          >
+            <span className="text-lg font-mono tracking-wider">
+              Hi, my name is
+            </span>
+          </motion.div>
+
+          <div className="mt-8 mb-6">
+            <motion.h1
+              variants={itemVariants}
+              className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight leading-[1.1]"
+            >
+              <span className="inline-block bg-gradient-to-r from-[#ccd6f6] to-[#8892b0] text-transparent bg-clip-text">
+                MD Kamrul
+              </span>
+            </motion.h1>
+            <motion.h1
+              variants={itemVariants}
+              className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tight leading-[1.1] mt-2"
+            >
+              <span className="inline-block bg-gradient-to-r from-[#8892b0] to-[#64ffda] text-transparent bg-clip-text">
+                Hasan
+              </span>
+            </motion.h1>
+          </div>
+
+          <motion.h2
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[2] mb-10 bg-gradient-to-r from-[#8892b0] to-[#64ffda]/70 text-transparent bg-clip-text py-2"
+          >
+            <span className="inline-block pb-1">
+              I build things for the web.
+            </span>
+          </motion.h2>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-[#8892b0] text-xl sm:text-2xl leading-[1.8] max-w-3xl mb-16"
+          >
+            I&apos;m a{" "}
+            <motion.span
+              className="inline-block bg-gradient-to-r from-[#64ffda] to-[#64ffda]/70 text-transparent bg-clip-text font-semibold"
+              whileHover={{ scale: 1.05 }}
+            >
+              Senior Full Stack Developer
+            </motion.span>{" "}
+            specializing in building exceptional digital experiences. Currently
+            focused on building accessible, human-centered products with modern
+            technologies.
+          </motion.p>
+
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="inline-block"
+          >
+            <CommonLink
+              link={ResumeLink}
+              name={`Download My Resume`}
+              blank={true}
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

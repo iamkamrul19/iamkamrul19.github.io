@@ -18,9 +18,38 @@ export const skills = [
 export const myProjects = [
   {
     name: "FundenNext",
-    stack: ["Next JS", "TypeScript", "Tailwind CSS"],
-    img_url: "/fundednext.jpg",
+    stack: ["Next JS", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    img_url: "/lander.jpg",
     live_url: "https://fundednext.com/",
+  },
+  {
+    name: "FundenNext Dashboard",
+    stack: [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Ant Design",
+      "Redux",
+    ],
+    img_url: "/dashboard.jpg",
+    live_url: "https://app.fundednext.com/",
+  },
+  {
+    name: "Image Uploader",
+    stack: [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Ant Design",
+      "Redux",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+      "AWS",
+    ],
+    img_url: "/panel.jpg",
   },
 ];
 
@@ -83,7 +112,7 @@ export const nabList = [
 
   {
     name: "Resume",
-    link: "/resume",
+    link: ResumeLink,
     newTab: true,
   },
 ];

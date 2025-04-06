@@ -1,57 +1,59 @@
-export const Email = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-[25px] w-[25px]"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
+import React from "react";
+
+interface SVGProps {
+  className?: string;
+}
+
+export const Email: React.FC<SVGProps> = ({ className = "w-6 h-6" }) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      className="stroke-white group-hover:stroke-[#64ffda]"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+    />
+  </svg>
+);
+
+export const Call: React.FC<SVGProps> = ({ className = "w-6 h-6" }) => (
+  <svg
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path
+      className="stroke-white group-hover:stroke-[#64ffda]"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+    />
+  </svg>
+);
+
+export const Git: React.FC<SVGProps> = ({ className = "w-6 h-6" }) => (
+  <svg
+    className={className}
+    version="1.1"
+    id="Layer_1"
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    viewBox="0 0 291.32 291.32"
+  >
+    <g>
       <path
-        className="stroke-white group-hover:stroke-[#64ffda]"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-      />
-    </svg>
-  );
-};
-export const Call = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-[25px] w-[25px]"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        className="stroke-white group-hover:stroke-[#64ffda]"
-        // style={{ stroke: "#64ffda" }}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-      />
-    </svg>
-  );
-};
-export const Git = () => {
-  return (
-    <svg
-      className="h-[30px] w-[30px] cursor-pointer relative z-1 transition-all duration-300"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      viewBox="0 0 291.32 291.32"
-    >
-      <g>
-        <path
-          style={{ fill: "#1b7692" }}
-          d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66
+        style={{ fill: "#1b7692" }}
+        d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66
        s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235
        c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3
        c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0
@@ -61,118 +63,106 @@ export const Git = () => {
        c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184
        C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66
        C264.008,196.668,231.69,239.992,186.462,256.625z"
-        />
-      </g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-    </svg>
-  );
-};
-export const Linkedin = () => {
-  return (
-    <svg
-      className="h-[30px] w-[30px] cursor-pointer relative z-1 transition-all duration-300 "
-      version="1.1"
-      id="Capa_1"
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      viewBox="0 0 112.196 112.196"
-    >
+      />
+    </g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+  </svg>
+);
+
+export const Linkedin: React.FC<SVGProps> = ({ className = "w-6 h-6" }) => (
+  <svg
+    className={className}
+    version="1.1"
+    id="Capa_1"
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    viewBox="0 0 112.196 112.196"
+  >
+    <g>
+      <circle cx="56.098" cy="56.097" r="56.098" style={{ fill: "#1b7692" }} />
       <g>
-        <circle
-          cx="56.098"
-          cy="56.097"
-          r="56.098"
-          style={{ fill: "#1b7692" }}
-        />
-        <g>
-          <path
-            style={{ fill: "#F1F2F2" }}
-            d="M89.616,60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118
+        <path
+          style={{ fill: "#F1F2F2" }}
+          d="M89.616,60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118
          c-3.705,0-5.906,2.491-6.878,4.903c-0.353,0.862-0.444,2.059-0.444,3.268v22.524H48.684c0,0,0.18-36.546,0-40.329h13.411v5.715
          c-0.027,0.045-0.065,0.089-0.089,0.132h0.089v-0.132c1.782-2.742,4.96-6.662,12.085-6.662
          C83.002,42.462,89.616,48.226,89.616,60.611L89.616,60.611z M34.656,23.969c-4.587,0-7.588,3.011-7.588,6.967
          c0,3.872,2.914,6.97,7.412,6.97h0.087c4.677,0,7.585-3.098,7.585-6.97C42.063,26.98,39.244,23.969,34.656,23.969L34.656,23.969z
           M27.865,83.739H41.27V43.409H27.865V83.739z"
-          />
-        </g>
+        />
       </g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-    </svg>
-  );
-};
+    </g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+    <g></g>
+  </svg>
+);
 
-export const External = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      width="24px"
-      height="24px"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="group"
-    >
-      <path
-        className="stroke-white group-hover:stroke-[#64ffda]"
-        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-      ></path>
-      <polyline
-        className="stroke-white group-hover:stroke-[#64ffda]"
-        points="15 3 21 3 21 9"
-      ></polyline>
-      <line
-        className="stroke-white group-hover:stroke-[#64ffda]"
-        x1="10"
-        y1="14"
-        x2="21"
-        y2="3"
-      ></line>
-    </svg>
-  );
-};
+export const External: React.FC<SVGProps> = ({ className = "w-6 h-6" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    width="24px"
+    height="24px"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`group ${className}`}
+  >
+    <path
+      className="stroke-white group-hover:stroke-[#64ffda]"
+      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+    ></path>
+    <polyline
+      className="stroke-white group-hover:stroke-[#64ffda]"
+      points="15 3 21 3 21 9"
+    ></polyline>
+    <line
+      className="stroke-white group-hover:stroke-[#64ffda]"
+      x1="10"
+      y1="14"
+      x2="21"
+      y2="3"
+    ></line>
+  </svg>
+);
 
-export const Name = () => {
-  return (
-    <svg
-      strokeWidth={2}
-      className="text-line text-[24px] lg:text-3xl leading-8 h-[80px] stroke-[#64ffda]"
-    >
-      <text x="50%" dominantBaseline="middle" textAnchor="middle" y="50%">
-        KAMRUL HASAN
-      </text>
-    </svg>
-  );
-};
+export const Name: React.FC<SVGProps> = ({
+  className = "text-line text-[24px] lg:text-3xl leading-8 h-[80px] stroke-[#64ffda]",
+}) => (
+  <svg strokeWidth={2} className={className}>
+    <text x="50%" dominantBaseline="middle" textAnchor="middle" y="50%">
+      KAMRUL HASAN
+    </text>
+  </svg>
+);

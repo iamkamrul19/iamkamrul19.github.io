@@ -1,71 +1,119 @@
 /* eslint-disable @next/next/no-img-element */
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { myProjects } from "../Common/FixedData";
 import Title from "../Common/Title";
 import { External } from "../SVGIcon";
 
 const Projects = () => {
-  return (
-    <>
-      <section
-        className="container py-12 lg:py-16 2xl:py-24  overflow-hidden"
-        id="projects"
-      >
-        <Title title={"Some Things I've Built"} />
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-        <div className="flex flex-wrap  pt-5 lg:pt-10">
-          {myProjects.map((project, index) => {
-            return (
-              <div
-                className="w-full md:w-1/2 lg:w-4/12 py-2 md:p-2"
-                key={index}
-              >
-                <div className="bg-[#1224408f] p-2 md:p-[14px] border-[#8892b0] hover:border-[#64ffda] border-[1px] rounded group cursor-pointer overflow-hidden hover:scale-[104%] transition-all  duration-300">
-                  <div className="relative">
-                    <img
-                      src={project?.img_url}
-                      alt="imkamrul, imkamrul98, kamrul, kamrul hasan, kamrul hasan portfolio, kamrul hasan website, kamrul hasan developer, kamrul hasan  frontend developer, kamrul hasan  frontend developer portfolio"
-                      className="w-full object-cover rounded h-[200px]"
-                    />
-                    <div className="h-[100%] w-0 group-hover:w-full  bg-[#1224408f] top-0 absolute rounded opacity-0 translate-x-0 transition-all  duration-300 group-hover:opacity-100 backdrop-filter backdrop-blur-[2px]  flex justify-center items-center">
-                      {project?.live_url && (
-                        <Link
-                          href={project?.live_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <section className="container py-12 lg:py-16 overflow-hidden" id="projects">
+      <Title title={"Some Things I've Built"} />
+
+      <div className="max-w-3xl mx-auto pt-4">
+        <motion.div
+          className="flex flex-col gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {myProjects.map((project, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="group relative h-[500px] rounded-lg overflow-hidden shadow-lg shadow-[#64ffda]/5 hover:shadow-xl hover:shadow-[#64ffda]/10 transition-all duration-300"
+            >
+              {/* Background Image */}
+              <img
+                src={project?.img_url}
+                alt={project?.name}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#112240] via-[#112240]/80 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col justify-end p-8">
+                <div className="relative z-10">
+                  <Link
+                    href={project?.live_url || "#"}
+                    target="_blank"
+                    className="block mb-4"
+                  >
+                    <motion.h3
+                      className="text-[#ccd6f6] text-2xl font-semibold group-hover:text-[#64ffda] transition-colors duration-300"
+                      whileHover={{ x: 5 }}
+                    >
+                      {project?.name}
+                    </motion.h3>
+                  </Link>
+
+                  <div className="flex items-start gap-4">
+                    <span className="text-[#64ffda] text-base font-medium flex-shrink-0">
+                      Stack:
+                    </span>
+                    <div className="flex flex-wrap gap-3">
+                      {project?.stack?.map((item: string, idx: number) => (
+                        <motion.span
+                          key={idx}
+                          className="text-[#8892b0] text-base whitespace-nowrap"
+                          whileHover={{ color: "#64ffda" }}
+                          transition={{ duration: 0.2 }}
                         >
-                          <External />
-                        </Link>
-                      )}
+                          {item}
+                          {idx !== project?.stack.length - 1 && ","}
+                        </motion.span>
+                      ))}
                     </div>
                   </div>
-                  <Link
-                    href={project?.live_url}
-                    target="_blank"
-                    className="text-text-info text-lg block mt-2 group-hover:text-text-highlight"
-                  >
-                    {project?.name}
-                  </Link>
-                  <div className="text-text-sub-title text-sm  flex items-center flex-wrap">
-                    <p className="w-2/12">Stack: </p>
-                    <p className="flex justify-start w-10/12">
-                      {project?.stack?.map((item: any, idx) => {
-                        return (
-                          <span className=" whitespace-nowrap" key={idx}>
-                            {item}
-                            {idx !== project?.stack.length - 1 && " , "}
-                          </span>
-                        );
-                      })}
-                    </p>
-                  </div>
                 </div>
+
+                {/* External Link Button */}
+                {project?.live_url && (
+                  <motion.div
+                    className="absolute top-6 right-6 z-10"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <Link
+                      href={project?.live_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block p-4 rounded-full bg-[#64ffda]/10 hover:bg-[#64ffda]/20 transition-colors duration-300 shadow-md shadow-[#64ffda]/10"
+                    >
+                      <External className="w-7 h-7 text-[#64ffda]" />
+                    </Link>
+                  </motion.div>
+                )}
               </div>
-            );
-          })}
-        </div>
-      </section>
-    </>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

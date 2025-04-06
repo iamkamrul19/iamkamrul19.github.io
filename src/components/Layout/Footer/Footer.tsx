@@ -51,35 +51,47 @@ const Footer = () => {
             })}
           </ul>
         </div>
-        <div className="w-1/2 md:w-4/12  md:hidden">
-          <p className="text-lg lg:text-xl text-text-info font-bold">
+        <div className="w-1/2 md:w-4/12 md:hidden">
+          <p className="text-lg lg:text-xl text-text-info font-bold mb-4">
             Follow Me on
           </p>
-          <ul className="flex flex-col gap-y-5 gap-x-4 mt-2">
+          <ul className="flex flex-col gap-y-4">
             <Link
               href={GitLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+              className="group flex items-center space-x-3 w-fit"
             >
-              <Git />
-
-              <span className="text-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
-                Github
-              </span>
+              <div className="w-10 h-10 rounded-full bg-[#112240] flex items-center justify-center group-hover:bg-[#64ffda] group-hover:bg-opacity-10 transition-colors duration-300">
+                <Git className="w-5 h-5 text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300 font-medium">
+                  GitHub
+                </span>
+                <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  {GitLink.replace("https://", "")}
+                </span>
+              </div>
             </Link>
 
             <Link
               href={LinkEdinLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+              className="group flex items-center space-x-3 w-fit"
             >
-              <Linkedin />
-
-              <span className="text-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
-                Linkedin
-              </span>
+              <div className="w-10 h-10 rounded-full bg-[#112240] flex items-center justify-center group-hover:bg-[#64ffda] group-hover:bg-opacity-10 transition-colors duration-300">
+                <Linkedin className="w-5 h-5 text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300 font-medium">
+                  LinkedIn
+                </span>
+                <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  {LinkEdinLink.replace("https://", "")}
+                </span>
+              </div>
             </Link>
           </ul>
         </div>
@@ -108,32 +120,44 @@ const Footer = () => {
           </ul>
         </div>
         <div className="md:w-4/12 hidden md:block">
-          <p className="text-xl text-text-info font-bold">Follow Me on</p>
-          <ul className="flex  gap-x-4 mt-2">
+          <p className="text-xl text-text-info font-bold mb-4">Follow Me on</p>
+          <ul className="flex flex-col gap-y-4">
             <Link
               href={GitLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+              className="group flex items-center space-x-3 w-fit"
             >
-              <Git />
-
-              <span className="text-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
-                Github
-              </span>
+              <div className="w-10 h-10 rounded-full bg-[#112240] flex items-center justify-center group-hover:bg-[#64ffda] group-hover:bg-opacity-10 transition-colors duration-300">
+                <Git className="w-5 h-5 text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300 font-medium">
+                  GitHub
+                </span>
+                <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  {GitLink.replace("https://", "")}
+                </span>
+              </div>
             </Link>
 
             <Link
               href={LinkEdinLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 rounded-full relative group overflow-hidden hover:w-[130px] transition-all duration-300 hover:scale-[1.2]"
+              className="group flex items-center space-x-3 w-fit"
             >
-              <Linkedin />
-
-              <span className="text-text-highlight absolute top-[50%] translate-y-[-50%] opacity-0 left-0 transition-all duration-300 group-hover:left-12 group-hover:opacity-100">
-                Linkedin
-              </span>
+              <div className="w-10 h-10 rounded-full bg-[#112240] flex items-center justify-center group-hover:bg-[#64ffda] group-hover:bg-opacity-10 transition-colors duration-300">
+                <Linkedin className="w-5 h-5 text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-gray-300 group-hover:text-[#64ffda] transition-colors duration-300 font-medium">
+                  LinkedIn
+                </span>
+                <span className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                  {LinkEdinLink.replace("https://", "")}
+                </span>
+              </div>
             </Link>
           </ul>
         </div>

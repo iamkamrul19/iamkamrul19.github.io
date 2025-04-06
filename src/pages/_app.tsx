@@ -7,17 +7,30 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Front-End Developer | Expert in HTML, CSS, and JavaScript</title>
+        <title>
+          Kamrul Hasan | Senior Full Stack Developer | MERN Stack Expert
+        </title>
         <meta
           name="description"
-          content="As a front-end developer, I specialize in creating visually stunning and user-friendly websites using HTML, CSS, and JavaScript. With a strong background in design and a focus on delivering the best possible user experience, I am dedicated to helping my clients achieve their online goals."
+          content="Kamrul Hasan is a Senior Full Stack Developer specializing in MERN stack development. With expertise in MongoDB, Express.js, React.js, and Node.js, I create robust, scalable web applications. Explore my portfolio and professional journey at imkamrul."
         />
         <meta
           name="keywords"
-          content="front-end developer, HTML, CSS, JavaScript,React js, Next js, responsive design, user experience, web design, web development, mobile-friendly"
+          content="Kamrul Hasan, Full Stack Developer, MERN Developer, MongoDB, Express.js, React.js, Node.js, Web Development, JavaScript, TypeScript, Next.js, Software Engineer, imkamrul"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />\
+        <meta name="author" content="Kamrul Hasan" />
+        <meta
+          property="og:title"
+          content="Kamrul Hasan | Senior Full Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Professional portfolio of Kamrul Hasan - Senior Full Stack Developer specializing in MERN stack development"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://imkamrul.github.io" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
       </Head>
       <Layout>
         <Component {...pageProps} />
