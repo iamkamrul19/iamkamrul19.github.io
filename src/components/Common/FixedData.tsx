@@ -17,6 +17,23 @@ export const skills = [
 
 export const myProjects = [
   {
+    name: "Resume Builder",
+    stack: [
+      "Next JS",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Ant Design",
+      "Redux",
+      "Node JS",
+      "Express JS",
+      "MongoDB",
+      "AWS",
+    ],
+    img_url: "/resume-builder.jpg",
+    live_url: "https://www.build-my-resume.site/",
+  },
+  {
     name: "FundenNext",
     stack: ["Next JS", "TypeScript", "Tailwind CSS", "Shadcn UI"],
     img_url: "/lander.jpg",

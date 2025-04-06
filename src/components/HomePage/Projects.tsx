@@ -53,7 +53,7 @@ const Projects = () => {
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#112240] via-[#112240]/80 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#112240]/90 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300" />
 
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8">
